@@ -64,7 +64,7 @@ defaultContentLanguage = 'en'
   mono_font       = "Fira Code" # Default is System font
 
     [params.footer]
-        copyright = "© :YEAR: Lotus Labs. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)"
+        copyright = "© Giseldo Neo :YEAR:"
         # version = true # includes git commit info
 
     [params.social]
