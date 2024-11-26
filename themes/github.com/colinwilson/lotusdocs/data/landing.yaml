@@ -41,6 +41,6 @@ hero:
   cta2Button:
     icon: rocket_launch
     btnText: "Acessar"
-    url: "/docs/"
+    url: "/cursos/docs/"
 
   #info: "Um empreendimento"
