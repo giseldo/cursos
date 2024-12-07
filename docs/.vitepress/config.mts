@@ -41,7 +41,7 @@ export default defineConfig({
         {
           text: 'Regressao',
           items: [
-            { text: 'Introcução', link: '/regressao/' },
+            { text: 'Introdução', link: '/regressao/' },
             { text: 'Vídeo', link: '/regressao/2-video' },
             { text: 'Exercício', link: '/regressao/3-exercicios' },
           ]

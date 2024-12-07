@@ -1,8 +1,2 @@
----
-title: "Video"
-description: "Exercícios de fixação"
-type: "docs"
-weight : 20
----
+# Vídeo
 
-{{< youtube t6wZZJc4O64 >}}

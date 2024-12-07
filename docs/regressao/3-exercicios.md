@@ -1,12 +1,5 @@
----
-title: "Exercícios"
-description: "Exercícios de fixação"
-type: "docs"
-toc: true
-weight : 30
----
 
-## Exercícios
+# Exercícios
 
 Versão on-line destes exercícios
 

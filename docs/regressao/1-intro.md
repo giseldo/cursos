@@ -1,10 +1,4 @@
----
-title: "Introdução"
-description: "Uma breve introdução à regressão linear"
-type: "docs"
-katex: true
-weight : 10
----
+# Introdução
 
 ## Definição
 
