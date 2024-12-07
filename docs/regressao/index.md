@@ -1,11 +1,4 @@
----
-title: "Regressão Linear"
-description: "Curso de Regressão linear com Python"
-type: "docs"
-next: "1-intro"
----
-
-## Sobre o curso
+# Sobre o curso
 
 A regressão linear é uma das ferramentas estatísticas mais antigas e fundamentais, utilizada para compreender e modelar as relações entre variáveis. Apesar de sua simplicidade, ela continua a ser uma técnica valiosa na análise de dados moderna e um componente essencial em muitos algoritmos de aprendizagem de máquina. 
 Este curso fornece uma visão inicial objetiva sobre a teoria e a aplicação prática da regressão linear no contexto da ciência de dados e aprendizado de máquina com a linguagem Python.

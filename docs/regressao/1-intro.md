@@ -23,8 +23,6 @@ onde:
 
 - $\epsilon$ é o termo de erro.
 
-{{< alert text="O que é uma variável dependente e independente serão explicado nas seções seguintes." />}}
-
 ## História e Evolução
 
 O conceito de regressão linear começou com _Sir Francis Galton_, que introduziu o termo "regressão" em um estudo sobre a hereditariedade da altura em 1877.
@@ -47,22 +45,22 @@ Isso permitiu o processamento de grandes volumes de dados e a aplicação de reg
 Veja na **Figura 1** uma linha do tempo dessa evolução.
 
 **Figura 1** - Linha do Tempo
-<img src="/linhadotempo.png" alt="" srcset=""></br>
+
 Fonte: O autor.
 
-{{% alert context="light" %}}
+
 O Python foi criado por Guido van Rossum e lançado pela primeira vez em 1991. Van Rossum começou a desenvolver Python no final dos anos 1980 como um sucessor de uma linguagem chamada ABC.
 A ideia era criar uma linguagem de programação que fosse fácil de entender e de usar, com uma sintaxe clara e legível. O nome Python foi escolhido como uma referência ao grupo de comédia britânico Monty Python, do qual Van Rossum era fã.
 Desde o seu lançamento, Python tem evoluído significativamente, com várias versões lançadas ao longo dos anos, incluindo as séries Python 2.x e Python 3.x, sendo esta última a mais atual e recomendada para novos projetos.
-{{% /alert %}}
 
-{{% alert context="light" %}}
+
+
 A linguagem de programação R surgiu em meados da década de 1990.
 Ela foi criada por Ross Ihaka e Robert Gentleman, dois estatísticos da Universidade de Auckland, na Nova Zelândia. O desenvolvimento inicial do R começou em 1992, e a primeira versão pública foi lançada em 1995. R foi projetada como uma linguagem para estatística e análise de dados, fortemente influenciada pela linguagem S, que foi desenvolvida
 anteriormente nos laboratórios da Bell.
 Uma das principais vantagens do R é a sua capacidade de fornecer uma ampla gama de ferramentas estatísticas e gráficas, tornando-o popular entre estatísticos, cientistas de dados e pesquisadores em várias disciplinas.
 Desde o seu lançamento, R tem se expandido com contribuições de uma comunidade ativa, levando ao desenvolvimento de inúmeros pacotes que ampliam suas capacidades.
-{{% /alert %}}
+
 
 ## Importância na Aprendizagem de Máquina
 
