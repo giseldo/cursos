@@ -53,7 +53,12 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/giseldo' }
-    ]
+    ],
+
+    footer: {
+      message: 'Lançado sob a Licença MIT.',
+      copyright: 'Direitos autorais © 2024 Giseldo Neo'
+    }
   }
 })
 
