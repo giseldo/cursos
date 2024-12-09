@@ -5,14 +5,18 @@ layout: home
 hero:
   name: "Neo Cursos"
   text: "Cursos em inteligência artificial"
-  tagline: Aprendizado em ritmo próprio
-
 features:
-  - title: Interface limpa
-    details: Aprenda em uma interface limpa e sem distrações
-  - title: Prática e Teoria
-    details: Conteúdo que une a teoria e a prática com programação
-  - title: Aprenda no seu tempo
-    details: Pare e retome a leitura quando quiser
+  - title: Chatbot
+    details: Chatbot com Gradio
+    link: /chatbot/
+    linkText: Leia mais
+  - title: Processamento de linguagem natural
+    details: Processamento de linguagem natural com Hugging Face
+    link: /pln/
+    linkText: Leia mais
+  - title: Regressao Linear
+    details: Regressao Linear com Python
+    link: /regressao/
+    linkText: Leia mais
 ---
 

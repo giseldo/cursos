@@ -8,17 +8,17 @@ export default defineConfig({
   description: "Chatbots com Gradio",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Chatbot', link: '/chatbot/' },
-      { text: 'PLN', link: '/pln/' },
-      { text: 'Regressão', link: '/regressao/' },
-      { text: 'Blog', link: 'http://giseldo.github.io' },
+    nav: 
+    [
+      { text: 'Home', link: '/' },
+      { text: 'Sobre', link: '/pages/sobre' },
+      { text: 'Blog', link: 'http://giseldo.github.io/blog' },
     ],
 
     sidebar: {
       '/pln/': [
         {
-          text: 'PLN',
+          text: 'Processamento de linguagem natural',
           items: [
             { text: 'Sobre', link: '/pln/' },
             { text: 'Introdução', link: '/pln/1-introducao' },
@@ -39,7 +39,7 @@ export default defineConfig({
 
       '/regressao/': [
         {
-          text: 'Regressao',
+          text: 'Regressao Linear',
           items: [
             { text: 'Sobre', link: '/regressao/' },
             { text: 'Introdução', link: '/regressao/1-intro' },
@@ -58,6 +58,10 @@ export default defineConfig({
     footer: {
       message: 'Lançado sob a Licença MIT.',
       copyright: 'Direitos autorais © 2024 Giseldo Neo'
+    },
+
+    search: {
+      provider: 'local'
     }
   }
 })
