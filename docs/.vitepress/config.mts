@@ -52,7 +52,7 @@ export default defineConfig({
 
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/giseldo' }
+      { icon: 'github', link: 'https://github.com/giseldo/cursos/' }
     ],
 
     footer: {
