@@ -50,9 +50,11 @@ export default defineConfig({
       ]
     },
 
-
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/giseldo/cursos/' }
+      { icon: 'github', link: 'https://github.com/giseldo/curdos' },
+      { icon: 'twitter', link: 'https://twitter.com/giseldoneo' },
+      { icon: 'instagram', link: 'https://instagram.com/neogiseldo' },
+      { icon: 'youtube', link: 'https://youtube.com/giseldoneo' }
     ],
 
     footer: {
