@@ -146,11 +146,11 @@ features: [‘and’, ‘ball’, ‘cat’, ‘dog’, ‘go’, ‘hates’, �
 
 Chamaremos isso de vetor de características/recursos/feature. 
 
-### Pré-processamento de dados
+## Pré-processamento de dados
 
 Antes que um modelo processe o texto para uma tarefa específica, o texto geralmente precisa ser pré-processado para melhorar o desempenho do modelo ou para transformar palavras e caracteres em um formato que o modelo possa entender. Várias técnicas podem ser usadas neste pré-processamento de dados:
 
-#### Tokenização
+### Tokenização
 
 O processo de dividir o texto em unidades menores chamadas tokens, que podem ser palavras, subpalavras ou caracteres.
 

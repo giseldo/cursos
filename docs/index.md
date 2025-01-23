@@ -7,27 +7,37 @@ hero:
   text: "Cursos em inteligência artificial"
 features:
   - title: Chatbot com Gradio
-    details: Chatbot com Gradio
+    details: 
     link: /chatbot/
     linkText: Leia mais
-  - title: Processamento de linguagem natural com Hugging Face
-    details: Processamento de linguagem natural com Hugging Face
+
+  - title: PLN com Hugging Face
+    details: 
     link: /pln/
     linkText: Leia mais
-  - title: NLP medium article
-    details: NLP medium article
+
+  - title: Transformers Quickstart
+    details: 
+    link: /transformers/
+    linkText: Leia mais
+
+  - title: PLN (medium article)
+    details: 
     link: /nlp/
     linkText: Leia mais
+
   - title: Regressao Linear com Python
-    details: Regressao Linear com Python
+    details: 
     link: /regressao/
     linkText: Leia mais
+
   - title: Estatística e AM com Python
-    details: Estatistica e AM com Python
+    details: 
     link: /estatistica/
     linkText: Leia mais
-  - title: AM
-    details: Aprendizagem de Máquina
+
+  - title: Aprendizagem de Máquina (book)
+    details: 
     link: /am/
     linkText: Leia mais
 ---

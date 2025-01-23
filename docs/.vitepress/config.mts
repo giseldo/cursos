@@ -16,6 +16,10 @@ export default withMermaid({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    outline: {
+      level: [2, 3] // Define o nível global do TOC
+    },
+    
     nav: 
     [
       { text: 'Home', link: '/' },
@@ -61,6 +65,15 @@ export default withMermaid({
           text: 'NLP',
           items: [
             { text: 'Introdução', link: '/nlp/' },
+            ]
+        }
+      ],
+
+      '/transformers/': [
+        {
+          text: 'Transformers',
+          items: [
+            { text: 'Introdução', link: '/transformers/' },
             ]
         }
       ],
