@@ -1,11 +1,19 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from "vitepress-plugin-mermaid";
+
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   base: '/cursos/',
   lang: 'br',
   title: "Neo Cursos",
   description: "Chatbots com Gradio",
+  markdown: {
+    math: true
+  },
+  mermaid: {
+    // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: 
@@ -16,6 +24,27 @@ export default defineConfig({
     ],
 
     sidebar: {
+      '/estatistica/': [
+        {
+          text: 'Estatística',
+          items: [
+            { text: 'Pag 1', link: '/estatistica/' },
+            { text: 'Pag 2', link: '/estatistica/pag2' }                        
+          ]
+        }
+      ],
+      '/am/': [
+        {
+          text: 'AM',
+          items: [
+            { text: 'Introdução', link: '/am/' },
+            { text: 'Pag 2', link: '/am/cap2' },
+            { text: 'Pag 3', link: '/am/cap3' },
+            { text: 'Pag 4', link: '/am/cap4' },
+            { text: 'Pag 4', link: '/am/cap5' }                        
+          ]
+        }
+      ],
       '/pln/': [
         {
           text: 'Processamento de linguagem natural',
@@ -24,6 +53,15 @@ export default defineConfig({
             { text: 'Introdução', link: '/pln/1-introducao' },
             { text: 'Transformers', link: '/pln/2-transformers' }                        
           ]
+        }
+      ],
+
+      '/NLP/': [
+        {
+          text: 'NLP',
+          items: [
+            { text: 'Introdução', link: '/nlp/' },
+            ]
         }
       ],
 
@@ -58,8 +96,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Lançado sob a Licença MIT.',
-      copyright: 'Direitos autorais © 2024 Giseldo Neo'
+      message: 'Todos os direitos reservados.',
+      copyright: '© 2024 Giseldo Neo'
     },
 
     search: {

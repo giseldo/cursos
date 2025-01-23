@@ -1,0 +1,12 @@
+
+.vp-doc h2 {
+    margin: 6px 0 16px;
+    border-top: 0px solid var(--vp-c-divider);
+    border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc p {
+    text-align: justify;
+}
+
+  
