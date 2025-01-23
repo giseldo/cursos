@@ -74,14 +74,6 @@ Especificamente, nas tarefas preditivas, os modelos analisam os atributos predit
 
 Embora essa divisão entre modelos preditivos e descritivos seja amplamente aceita, há casos em que as fronteiras entre essas categorias podem se tornar nebulosas. O aprendizado \textbf{semissupervisionado}, por exemplo, utiliza tanto dados rotulados quanto não rotulados para realizar tarefas que podem ser preditivas ou descritivas, dependendo do contexto \cite{zhu2009introduction}. De forma semelhante, o \textbf{aprendizado ativo} envolve a seleção estratégica de dados rotulados ou não rotulados para otimizar o treinamento do modelo \cite{settles2012active}. O \textbf{aprendizado por reforço}, por sua vez, explora interações com o ambiente através de feedbacks positivos ou negativos para aprender a partir das consequências das ações \cite{sutton1998reinforcement}.
 
-![Classificacao](./classificacao.png)
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{figs/classificacao.png}
-    \caption{Categorização de AM}
-    \label{fig:catagoriasam}
-\end{figure}
 
 ## Generalização e viés
 
