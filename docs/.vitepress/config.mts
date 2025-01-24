@@ -28,6 +28,7 @@ export default withMermaid({
     ],
 
     sidebar: {
+
       '/estatistica/': [
         {
           text: 'Estatística',
@@ -37,6 +38,7 @@ export default withMermaid({
           ]
         }
       ],
+
       '/am/': [
         {
           text: 'AM',
@@ -49,6 +51,7 @@ export default withMermaid({
           ]
         }
       ],
+
       '/pln/': [
         {
           text: 'Processamento de linguagem natural',
@@ -60,7 +63,7 @@ export default withMermaid({
         }
       ],
 
-      '/NLP/': [
+      '/nlp/': [
         {
           text: 'NLP',
           items: [
@@ -69,12 +72,21 @@ export default withMermaid({
         }
       ],
 
+      '/llm/': [
+        {
+          text: 'LLM (medium)',
+          items: [
+            { text: 'Introdução', link: '/llm/' },
+          ]
+        }
+      ],
+
       '/transformers/': [
         {
           text: 'Transformers',
           items: [
             { text: 'Introdução', link: '/transformers/' },
-            ]
+          ]
         }
       ],
 

@@ -6,32 +6,32 @@ hero:
   name: "Neo Cursos"
   text: "Cursos em inteligência artificial"
 features:
-  - title: Chatbot com Gradio
+  - title: Chatbot (Gradio)
     details: 
     link: /chatbot/
     linkText: Leia mais
 
-  - title: PLN com Hugging Face
+  - title: PLN (Hugging Face)
     details: 
     link: /pln/
     linkText: Leia mais
 
-  - title: Transformers Quickstart
+  - title: Transformers Quickstart (Hugging Face)
     details: 
     link: /transformers/
     linkText: Leia mais
 
-  - title: PLN (medium article)
+  - title: PLN (medium)
     details: 
     link: /nlp/
     linkText: Leia mais
 
-  - title: Regressao Linear com Python
+  - title: Regressao Linear com Python (self)
     details: 
     link: /regressao/
     linkText: Leia mais
 
-  - title: Estatística e AM com Python
+  - title: Estatística e AM com Python (self)
     details: 
     link: /estatistica/
     linkText: Leia mais
@@ -39,6 +39,11 @@ features:
   - title: Aprendizagem de Máquina (book)
     details: 
     link: /am/
+    linkText: Leia mais
+
+  - title: LLM (medium)
+    details: 
+    link: /llm/
     linkText: Leia mais
 ---
 

@@ -51,8 +51,8 @@ for result in results:
 ```
 
 ```
-    label: POSITIVE, with score: 0.9998
-    label: NEGATIVE, with score: 0.5309
+label: POSITIVE, with score: 0.9998
+label: NEGATIVE, with score: 0.5309
 ```
 
 ## Exemplo reconhecimento automático de fala

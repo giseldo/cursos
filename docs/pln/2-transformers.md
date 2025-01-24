@@ -100,7 +100,7 @@ classifier("This is a course about the Transformers library",
  'scores': [0.8445994257926941, 0.11197380721569061, 0.04342673346400261]}
 ```
 
-:::tip
+:::info
 O modelo padrão utilizado foi _facebook/bart-large-mnli_
 :::
 
@@ -131,7 +131,7 @@ develop skills in the real world  and learn skills in
 the virtual world.\n\nFor the VirtualWorld course,"""}]
 ```
 
-:::tip
+:::info
 O modelo padrão utilizado foi o _openai-community/gpt2_.
 :::
 
@@ -160,7 +160,9 @@ around you understand how you can help them.\n\nThe"""},
  framework for writing an  application"""}]
  ```
 
+:::info
 O modelo padrão utilizado foi o _openai-community/gpt2_.    
+:::
 
 ### Usando qualquer modelo do Hub em um pipeline
 
