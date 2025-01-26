@@ -2,11 +2,11 @@
 draft: false
 ---
 
-# Large Language Model.
+# v2 Large Language Model.
 
 ## sobre
 
-Este é uma tradução, com alguns ajustes e remoção de algumas partes, da postagem publicada no [medium](https://towardsdatascience.com/large-language-models-a-short-introduction-bb8366118ad0) com o título "Large Language Models: A Short Introduction".
+Este é uma tradução para portugues brasileiro, com alguns ajustes e remoção de algumas partes, da postagem publicada no [medium](https://towardsdatascience.com/large-language-models-a-short-introduction-bb8366118ad0) de autoria de Carolina Bento com o título "Large Language Models: A Short Introduction".
 
 Neste artigo, daremos uma breve olhada no que são LLMs, por que eles são uma tecnologia extremamente interessante, por que eles são importantes.
 
@@ -14,7 +14,9 @@ Observação: neste artigo, usaremos Large Language Model, LLM e modelo de forma
 
 ## O que é um LLM
 
-Um modelo de linguagem grande, normalmente chamado de LLM, é um modelo matemático que gera texto, como preencher a lacuna para a próxima palavra em uma frase [1].
+Um [modelo de linguagem grande](https://en.wikipedia.org/wiki/Large_language_model), normalmente chamado de LLM, é um modelo matemático que gera texto, como preencher a lacuna para a próxima palavra em uma frase.
+
+<iframe width="100%" height="522" src="https://www.youtube.com/embed/LPZh9BOjkQs" title="Large Language Models explained briefly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Por exemplo, quando você o alimenta com a frase 
 
@@ -75,9 +77,11 @@ A atenção permite que o modelo refine o significado que cada palavra codifica 
 
 Isso, mais alguns passos adicionais como treinar uma Rede Neural Feedforward , tudo feito várias vezes, faz com que o modelo gradualmente refine sua capacidade de codificar as informações corretas. Todos esses passos têm a intenção de tornar o modelo mais preciso e não misturar o significado de  ```bow``` , o movimento e  ```bow``` (objeto relacionado ao arco e flecha) quando ele executa uma tarefa de previsão.
 
+Imagem e legenda retiradas do artigo referenciado em [^2].
+
 ![alt text](llmarch.png)
 
-<center><small>Um diagrama de fluxo básico representando vários estágios de LLMs do pré-treinamento ao prompt/utilização. Prompts LLMs para gerar respostas são possíveis em diferentes estágios de treinamento como pré-treinamento, ajuste de instrução ou ajuste de alinhamento. “RL” significa aprendizado por reforço, “RM” representa modelagem de recompensa e “RLHF” representa aprendizado por reforço com feedback humano. Imagem e legenda retiradas do artigo referenciado em [2].</small></center>
+<center><small>Um diagrama de fluxo básico representando vários estágios de LLMs do pré-treinamento ao prompt/utilização. Prompts LLMs para gerar respostas são possíveis em diferentes estágios de treinamento como pré-treinamento, ajuste de instrução ou ajuste de alinhamento. “RL” significa aprendizado por reforço, “RM” representa modelagem de recompensa e “RLHF” representa aprendizado por reforço com feedback humano. </small></center>
 
 O desenvolvimento de Transformers e GPUs permitiu que os LLMs explodissem em uso e aplicação em comparação aos modelos de linguagem anteriores que precisavam ler uma palavra por vez. Sabendo que um modelo fica melhor quanto mais dados de qualidade ele aprende, você pode ver como processar uma palavra por vez era um grande gargalo.
 
@@ -101,9 +105,14 @@ Existem vários produtos de Inteligência Artificial (IA) que alavancam LLMs, de
 
 Os LMMs são, sem dúvida, uma área de pesquisa emergente que vem evoluindo em um ritmo extremamente rápido, como você pode ver na linha do tempo abaixo.
 
+Imagem e legenda retiradas do artigo referenciado em [^1]
+
 ![alt text](linhadotempo.png)
 
-<center><small>Exibição cronológica de lançamentos de LLM: cartões azuis representam modelos 'pré-treinados', enquanto cartões laranja correspondem a modelos 'ajustados por instrução'. Os modelos na metade superior significam disponibilidade de código aberto, enquanto aqueles na parte inferior são de código fechado. O gráfico ilustra a tendência crescente em direção a modelos ajustados por instrução e de código aberto, destacando o cenário em evolução e as tendências na pesquisa de processamento de linguagem natural. Imagem e legenda retiradas do artigo referenciado em [2].</small></center>
+<center><small>Exibição cronológica de lançamentos de LLM: cartões azuis representam modelos 'pré-treinados', enquanto cartões laranja correspondem a modelos 'ajustados por instrução'. Os modelos na metade superior significam disponibilidade de código aberto, enquanto aqueles na parte inferior são de código fechado. O gráfico ilustra a tendência crescente em direção a modelos ajustados por instrução e de código aberto, destacando o cenário em evolução e as tendências na pesquisa de processamento de linguagem natural.</small></center>
+
+
+
 
 Estamos apenas nos primeiros dias da produtização, ou aplicação de produtos. Mais e mais empresas estão aplicando LLMs em suas áreas de domínio, a fim de simplificar tarefas que levariam vários anos e uma quantidade incrível de fundos para pesquisar, desenvolver e levar ao mercado.
 
@@ -113,10 +122,10 @@ Por exemplo, em Genômica, gLMs ou Modelos de Linguagem Genômica, ou seja, Gran
 
 ## Referências
 
-[1] Grandes modelos de linguagem explicados brevemente ( vídeo )
-
-[2] Uma visão geral abrangente de grandes modelos de linguagem . 2024. Humza Naveed e Asad Ullah Khan e Shi Qiu e Muhammad Saqib e Saeed Anwar e Muhammad Usman e Naveed Akhtar e Nick Barnes e Ajmal Mian.
+[^1]:Uma visão geral abrangente de grandes modelos de linguagem . 2024. Humza Naveed e Asad Ullah Khan e Shi Qiu e Muhammad Saqib e Saeed Anwar e Muhammad Usman e Naveed Akhtar e Nick Barnes e Ajmal Mian.
 
 [3] Modelos de linguagem são aprendizes de poucas tentativas . 2020. Tom B. Brown e Benjamin Mann e Nick Ryder e Melanie Subbiah e Jared Kaplan e Prafulla Dhariwal e Arvind Neelakantan e Pranav Shyam e Girish Sastry e Amanda Askell e Sandhini Agarwal e Ariel Herbert-Voss e Gretchen Krueger e Tom Henighan e Rewon Child e Aditya Ramesh e Daniel M. Ziegler e Jeffrey Wu e Clemens Winter e Christopher Hesse e Mark Chen e Eric Sigler e Mateusz Litwin e Scott Gray e Benjamin Chess e Jack Clark e Christopher Berner e Sam McCandlish e Alec Radford e Ilya Sutskever e Dario Amodei
 
 [4] Modelos de linguagem genômica: oportunidades e desafios . 2024. Gonzalo Benegas e Chengzhong Ye e Carlos Albors e Jianan Canal Li e Yun S. Song.
+
+[^2]: Bento, Carolina. "Large Language Models: A Short Introduction." Medium, Towards Data Science, 2023.

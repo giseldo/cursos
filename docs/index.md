@@ -45,6 +45,11 @@ features:
     details: 
     link: /llm/
     linkText: Leia mais
+
+  - title: Articles
+    details: 
+    link: /articles/
+    linkText: Leia mais
 ---
 
 <!-- 
