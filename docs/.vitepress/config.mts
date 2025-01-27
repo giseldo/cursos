@@ -76,7 +76,9 @@ export default withMermaid({
         {
           text: 'LLM (medium)',
           items: [
-            { text: 'Introdução', link: '/llm/' },
+            { text: 'Large Language Models: A Short Introduction', link: '/llm/' },
+            { text: 'A Very Gentle Introduction to Large Language Models without the Hype', link: '/llm/verygentle' },
+            
           ]
         }
       ],

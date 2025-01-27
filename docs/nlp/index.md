@@ -2,7 +2,9 @@
 
 ## Sobre
 
-Esse material é umta tradução em português brasileiro desse [artigo no medium](https://medium.com/@vipra_singh/llm-architectures-explained-nlp-fundamentals-part-1-de5bf75e553a) 
+Esse material é uma tradução em português brasileiro desse [artigo no medium](https://medium.com/@vipra_singh/llm-architectures-explained-nlp-fundamentals-part-1-de5bf75e553a)
+
+[Mais artigos da autora](https://medium.com/@vipra_singh) com outros materiais explicativos.
 
 ## O que é PLN?
 

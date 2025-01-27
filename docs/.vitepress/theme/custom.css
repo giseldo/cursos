@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  --vp-font-family-base: 'Inter', sans-serif;
+  --vp-font-family-headings: 'Inter', sans-serif;
+}
+
+:root {
+    /* Controle de espaçamento */
+    --vp-line-height-base: 1.8; /* Linha mais espaçada */
+    --vp-line-height-headings: 1.4;
+
+    /* Controle de fontes */
+    --vp-font-size-root: 16px; /* Tamanho base da fonte */
+    --vp-font-size-large: 18px;
+    --vp-font-size-small: 14px;
+
+    /* Contraste */
+    --vp-text-color: #333333; /* Tom mais suave que preto puro */
+    --vp-link-color: #0078d7; /* Links em azul */
+  }
+
+  body {
+    font-family: var(--vp-font-family-base);
+    line-height: var(--vp-line-height-base);
+  }
+
 
 .vp-doc h2 {
     margin: 6px 0 16px;
@@ -5,8 +32,3 @@
     border-bottom: 1px solid var(--vp-c-divider);
 }
 
-.vp-doc p {
-    text-align: justify;
-}
-
-  

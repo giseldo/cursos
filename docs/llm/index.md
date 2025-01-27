@@ -1,8 +1,4 @@
----
-draft: false
----
-
-# v2 Large Language Model.
+# Large Language Models: A Short Introduction
 
 ## sobre
 
