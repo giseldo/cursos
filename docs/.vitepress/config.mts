@@ -23,8 +23,7 @@ export default withMermaid({
     nav: 
     [
       { text: 'Home', link: '/' },
-      { text: 'Sobre', link: '/pages/sobre' },
-      { text: 'Blog', link: 'http://giseldo.github.io/blog' },
+      { text: 'Sobre', link: '/pages/sobre' }
     ],
 
     sidebar: {
