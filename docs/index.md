@@ -6,9 +6,9 @@ hero:
   name: "Neo Cursos"
   text: "Cursos em inteligência artificial"
 features:
-  - title: Chatbot (Gradio)
+  - title: Chatbot Book
     details: 
-    link: /chatbot/
+    link: /chatbotbook/
     linkText: Leia mais
 
   - title: PLN (Hugging Face)
