@@ -1,6 +1,6 @@
 # Sobre
 
-Autor: Giseldo Neo
+Autor: Giseldo Neo & Alana Neo
 
 Para navegar entre os capítulos, utilize as setas de navegação esquerda e direita.
 
