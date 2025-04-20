@@ -6,8 +6,8 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 export default withMermaid({
   base: '/cursos/',
   lang: 'br',
-  title: "Neo Cursos",
-  description: "Chatbots com Gradio",
+  title: "Neo",
+  description: "Cursos",
   markdown: {
     math: true
   },
@@ -27,6 +27,27 @@ export default withMermaid({
     ],
 
     sidebar: {
+
+      '/chatbotbook/': [
+        {
+          text: 'Chatbotbook',
+          items: [
+            { text: 'Index', link: '/chatbotbook/' },
+            { text: 'Definições e contexto', link: '/chatbotbook/1_chatbots_definicoes_e_contexto' },
+            { text: 'Eliza Explicado', link: '/chatbotbook/2_eliza_explicado' },
+            { text: 'Artificial Intelligence Markup Language', link: '/chatbotbook/3_artificial_intelligence_markup_language' },
+            { text: 'Processamento de Linguagem Natural', link: '/chatbotbook/4_processamento_de_linguagem_natural' },
+            { text: 'Intenção em chatbots', link: '/chatbotbook/5_intencao_em_chatbots_chap_intents_' },
+            { text: 'Large Language Models', link: '/chatbotbook/6_llm' },
+            { text: 'Retrieval Augmented Generation', link: '/chatbotbook/7_retrieval_augmented_generation' },
+            { text: 'Chatbot Eliza em Python', link: '/chatbotbook/8_chatbot_eliza_em_python' },
+            { text: 'Usando Chatgpt com Langchain', link: '/chatbotbook/9_usando_chatgpt_com_langchain' },
+            { text: 'Criando Chatbots com LLMs através da Engenharia de Prompts', link: '/chatbotbook/10_criando_chatbots_com_llms_e_engenharia_de_prompts' },
+            { text: 'Expressões Regulares', link: '/chatbotbook/11_expressoes_regulares' },
+            { text: 'Usando o Gpt2', link: '/chatbotbook/12_usando_o_gpt2' },
+          ]
+        }
+      ],
 
       '/estatistica/': [
         {
@@ -123,7 +144,7 @@ export default withMermaid({
 
     footer: {
       message: 'Todos os direitos reservados.',
-      copyright: '© 2024 Giseldo Neo'
+      copyright: '© 2025 Giseldo Neo'
     },
 
     search: {

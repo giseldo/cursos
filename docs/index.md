@@ -8,7 +8,7 @@ hero:
 features:
   - title: Chatbot Book
     details: 
-    link: /chatbotbook/
+    link: /chatbotbook/1_chatbots_definicoes_e_contexto/
     linkText: Leia mais
 
   - title: PLN (Hugging Face)
@@ -21,35 +21,35 @@ features:
     link: /transformers/
     linkText: Leia mais
 
-  - title: PLN (medium)
-    details: 
-    link: /nlp/
-    linkText: Leia mais
+  # - title: PLN (medium)
+  #   details: 
+  #   link: /nlp/
+  #   linkText: Leia mais
 
-  - title: Regressao Linear com Python (self)
+  - title: Regressao Linear com Python
     details: 
     link: /regressao/
     linkText: Leia mais
 
-  - title: Estatística e AM com Python (self)
+  - title: Estatística e AM com Python
     details: 
     link: /estatistica/
     linkText: Leia mais
 
-  - title: Aprendizagem de Máquina (book)
+  - title: Aprendizagem de Máquina
     details: 
     link: /am/
     linkText: Leia mais
 
-  - title: LLM (medium)
-    details: 
-    link: /llm/
-    linkText: Leia mais
+  # - title: LLM (medium)
+  #   details: 
+  #   link: /llm/
+  #   linkText: Leia mais
 
-  - title: Articles
-    details: 
-    link: /articles/
-    linkText: Leia mais
+  # - title: Articles
+  #   details: 
+  #   link: /articles/
+  #   linkText: Leia mais
     
 ---
 

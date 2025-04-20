@@ -1,4 +1,3 @@
-
 # Exercícios
 
 Versão on-line destes exercícios

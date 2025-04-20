@@ -1,9 +1,15 @@
 import DefaultTheme from 'vitepress/theme';
+
+import Tts from './components/Tts.vue'
+
 import './custom.css'
 
 export default {
   ...DefaultTheme,
-  enhanceApp({ router }) {
+  
+  enhanceApp({ app, router }) {
+    app.component('Tts', Tts);
+
     if (typeof window !== 'undefined') {
       // Adiciona o evento para capturar teclas pressionadas
       window.addEventListener('keydown', (event) => {
