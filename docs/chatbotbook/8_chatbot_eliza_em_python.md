@@ -12,74 +12,76 @@ transformação predefinidas manualmente.
 [ ![image](./fig/colab-badge.png)
 ](https://colab.research.google.com/github/giseldo/chatbotbook/blob/main/notebook/eliza.ipynb)
 
-    import re  
-    import random  
+``` {.python language="Python" caption="Chatbot Eliza em Python"}
+import re  
+import random  
 
-    regras = [
-        (re.compile(r'\b(hello|hi|hey)\b', re.IGNORECASE),
-         ["Hello. How do you do. Please tell me your problem."]),
+regras = [
+    (re.compile(r'\b(hello|hi|hey)\b', re.IGNORECASE),
+     ["Hello. How do you do. Please tell me your problem."]),
 
-        (re.compile(r'\b(I am|I\'?m) (.+)', re.IGNORECASE),
-         ["How long have you been {1}?",   
-          "Why do you think you are {1}?"]),
+    (re.compile(r'\b(I am|I\'?m) (.+)', re.IGNORECASE),
+     ["How long have you been {1}?",   
+      "Why do you think you are {1}?"]),
 
-        (re.compile(r'\bI need (.+)', re.IGNORECASE),
-         ["Why do you need {1}?",
-          "Would it really help you to get {1}?"]),
+    (re.compile(r'\bI need (.+)', re.IGNORECASE),
+     ["Why do you need {1}?",
+      "Would it really help you to get {1}?"]),
 
-        (re.compile(r'\bI can\'?t (.+)', re.IGNORECASE),
-         ["What makes you think you can't {1}?",
-          "Have you tried {1}?"]),
+    (re.compile(r'\bI can\'?t (.+)', re.IGNORECASE),
+     ["What makes you think you can't {1}?",
+      "Have you tried {1}?"]),
 
-        (re.compile(r'\bmy (mother|father|mom|dad)\b', re.IGNORECASE),
-         ["Tell me more about your family.",
-          "How do you feel about your parents?"]),
+    (re.compile(r'\bmy (mother|father|mom|dad)\b', re.IGNORECASE),
+     ["Tell me more about your family.",
+      "How do you feel about your parents?"]),
 
-        (re.compile(r'\b(sorry)\b', re.IGNORECASE),
-         ["Please don't apologize."]),
+    (re.compile(r'\b(sorry)\b', re.IGNORECASE),
+     ["Please don't apologize."]),
 
-        (re.compile(r'\b(maybe|perhaps)\b', re.IGNORECASE),
-         ["You don't seem certain."]),
+    (re.compile(r'\b(maybe|perhaps)\b', re.IGNORECASE),
+     ["You don't seem certain."]),
 
-        (re.compile(r'\bbecause\b', re.IGNORECASE),
-         ["Is that the real reason?"]),
+    (re.compile(r'\bbecause\b', re.IGNORECASE),
+     ["Is that the real reason?"]),
 
-        (re.compile(r'\b(are you|do you) (.+)\?$', re.IGNORECASE),
-         ["Why do you ask that?"]),
+    (re.compile(r'\b(are you|do you) (.+)\?$', re.IGNORECASE),
+     ["Why do you ask that?"]),
 
-        (re.compile(r'\bcomputer\b', re.IGNORECASE),
-         ["Do computers worry you?"]),
-    ]
+    (re.compile(r'\bcomputer\b', re.IGNORECASE),
+     ["Do computers worry you?"]),
+]
 
-    respostas_padrao = [
-        "I see.",  
-        "Please tell me more.",  
-        "Can you elaborate on that?"  
-    ]
+respostas_padrao = [
+    "I see.",  
+    "Please tell me more.",  
+    "Can you elaborate on that?"  
+]
 
-    def response(entrada_usuario):
-        for padrao, respostas in regras:
-            match = padrao.search(entrada_usuario)  
-            if match:
-                resposta = random.choice(respostas)
-                if match.groups():
-                    resposta = resposta.format(*match.groups())
-                return resposta
-        return random.choice(respostas_padrao)
+def response(entrada_usuario):
+    for padrao, respostas in regras:
+        match = padrao.search(entrada_usuario)  
+        if match:
+            resposta = random.choice(respostas)
+            if match.groups():
+                resposta = resposta.format(*match.groups())
+            return resposta
+    return random.choice(respostas_padrao)
+```
 
+``` {.python language="Python" caption="Exemplo de uso do chatbot ELIZA"}
+print("User: Hello.")
+print("Bot: " + response("Hello."))
 
-    # Exemplo de uso
-    print("User: Hello.")
-    print("Bot: " + response("Hello."))
+print("User: I am feeling sad.")
+print("Bot: " + response("I am feeling sad."))
 
-    print("User: I am feeling sad.")
-    print("Bot: " + response("I am feeling sad."))
+print("Maybe I was not good enough.")
+print("Bot: " + response("Maybe I was not good enough."))
 
-    print("Maybe I was not good enough.")
-    print("Bot: " + response("Maybe I was not good enough."))
-
-    print("My mother tried to help.")
-    print("Bot: " + response("My mother tried to help."))
+print("My mother tried to help.")
+print("Bot: " + response("My mother tried to help."))
+```
 
 Na implementação, são definidos múltiplos padrões de expressões
 regulares que correspondem a palavras-chave ou estruturas frasais de

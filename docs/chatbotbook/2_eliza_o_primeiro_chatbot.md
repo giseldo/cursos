@@ -1,4 +1,4 @@
-# Eliza Explicado
+# Eliza: O Primeiro Chatbot
 
 ## Introdução
 
@@ -17,7 +17,8 @@ reference="fig:elizaeditor"}). Também foi codificado um editor de texto
 para as alterações do próprio Script.
 
 <figure id="fig:elizaeditor">
-
+<p><img src="./fig/eliza.png" style="width:90.0%" alt="image" /> <span
+id="fig:elizaeditor" data-label="fig:elizaeditor"></span></p>
 <figcaption>ELIZA: separação entre o código fonte, o script e o editor
 de texto.</figcaption>
 </figure>

@@ -34,7 +34,7 @@ export default withMermaid({
           items: [
             { text: 'Index', link: '/chatbotbook/' },
             { text: 'Definições e contexto', link: '/chatbotbook/1_chatbots_definições_e_contexto' },
-            { text: 'Eliza Explicado', link: '/chatbotbook/2_eliza_explicado' },
+            { text: 'ELIZA o primeiro chatbot', link: '/chatbotbook/2_eliza_o_primeiro_chatbot' },
             { text: 'Artificial Intelligence Markup Language', link: '/chatbotbook/3_artificial_intelligence_markup_language' },
             { text: 'Processamento de Linguagem Natural', link: '/chatbotbook/4_processamento_de_linguagem_natural' },
             { text: 'Intenção em chatbots', link: '/chatbotbook/5_intenção_em_chatbots_chap_intents_' },
