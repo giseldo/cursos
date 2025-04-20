@@ -19,11 +19,3 @@ print(output[0]['generated_text'])
 Este código é simples porque ele usa um modelo que já foi treinado em um
 grande dataset. Também é possível ajustar (fine-tune) um modelo
 pré-treinado em seus próprios dados para obter resultados melhores.
-
-[^1]: <https://github.com/keiffster/program-y/wiki/RDF>
-
-[^2]: <https://medium.com/pandorabots-blog/new-feature-visualize-your-aiml-26e33a590da1>
-
-[^3]: <https://www.pandorabots.com/mitsuku/>
-
-[^4]: <https://aisb.org.uk/category/loebner-prize/>

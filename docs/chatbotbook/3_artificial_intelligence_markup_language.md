@@ -1,5 +1,7 @@
 # Artificial Intelligence Markup Language
 
+## Introdução
+
 O Artificial Intelligence Markup Language (AIML) é uma especificação
 baseada em XML, proposta por [@Wallace2009], destinada à programação de
 agentes conversacionais, comumente denominados chatbots. A concepção da

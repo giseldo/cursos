@@ -1,5 +1,7 @@
 # Retrieval-Augmented Generation
 
+## Introdução
+
 Retrieval Augmented Generation (RAG) é uma abordagem inovadora que
 combina duas técnicas fundamentais na área de processamento de linguagem
 natural: recuperação de informações e geração de texto. A ideia central

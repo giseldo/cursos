@@ -8,7 +8,7 @@ hero:
 features:
   - title: Chatbot Book
     details: 
-    link: /chatbotbook/1_chatbots_definicoes_e_contexto/
+    link: /chatbotbook/
     linkText: Leia mais
 
   - title: PLN (Hugging Face)
