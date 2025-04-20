@@ -1,5 +1,7 @@
 # Expressões Regulares
 
+## Introdução
+
 Expressões regulares, frequentemente abreviadas como regex, são
 sequências de caracteres que definem padrões de busca. Elas são
 utilizadas em chatbots para diversas tarefas relacionadas ao

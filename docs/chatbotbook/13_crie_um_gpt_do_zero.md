@@ -1,5 +1,7 @@
 # Crie um GPT do Zero
 
+## Introdução
+
 Para escrever um **GPT**, precisamos de algumas coisas. Primeiro vamos
 criar um tokenizador em Python. Mas para facilitar, vamos usar um
 tokenizador já existente no hugging faces.

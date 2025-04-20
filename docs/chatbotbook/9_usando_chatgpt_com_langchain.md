@@ -1,5 +1,7 @@
 # Usando chatGPT com LangChain
 
+## Introdução
+
 LangChain é uma biblioteca de software de código aberto projetada para
 simplificar a interação com Large Language Models (LLMs) e construir
 aplicativos de processamento de linguagem natural robustos. Ele fornece
