@@ -77,8 +77,9 @@ caractéristicas e enorme quantidade de chatbots existentes. Existem
 outras classificações que serão discutidas em seções posteriores.
 
 <figure id="fig:tipo">
-
-<figcaption>Classificação chatbots.</figcaption>
+<p><img src="./fig/tipo_objetivo.png" style="width:90.0%" alt="image" />
+<span id="fig:tipo" data-label="fig:tipo"></span></p>
+<figcaption>Classificação chatbots por objetivo.</figcaption>
 </figure>
 
 A popularidade dos chatbots tem crescido significativamente em diversos
@@ -110,8 +111,8 @@ Figura [1.3](#fig:agente){reference-type="ref" reference="fig:agente"}
 ilustra uma arquitetura conceitual de alto nível para um agente.
 
 <figure id="fig:agente">
-<p><img src="./fig/ia.png" style="width:70.0%" alt="image" /> <span
-id="fig:agente" data-label="fig:agente"></span></p>
+<p><img src="./fig/original_agente.png" style="width:70.0%"
+alt="image" /> <span id="fig:agente" data-label="fig:agente"></span></p>
 <p>Fonte: Diretamente retirado de <span class="citation"
 data-cites="Russel2013"></span></p>
 <figcaption>Arquitetura conceitual de um agente.</figcaption>
@@ -124,7 +125,7 @@ específica de um agente, cujo propósito primário é a interação
 conversacional em linguagem natural.
 
 <figure id="fig:chatbot">
-<p><img src="./fig/chatbot.png" style="width:90.0%" alt="image" /> <span
+<p><img src="./fig/chatbot.png" style="width:70.0%" alt="image" /> <span
 id="fig:chatbot" data-label="fig:chatbot"></span></p>
 <figcaption>Representação esquemática de um chatbot.</figcaption>
 </figure>
@@ -286,6 +287,40 @@ além de abordagens baseadas em recuperação (Retrieval-Based) e
 generativas (Generative-Based)
 [@Borah2019; @Ramesh2019; @Shaikh2016; @Abdul-Kader2015; @Li2018], entre
 outras.
+
+- ELIZA: o primeiro chatbot, que utilizava correspondência de padrões
+  simples para simular um psicoterapeuta. O ELIZA foi um marco na
+  história dos chatbots e influenciou o desenvolvimento de sistemas
+  conversacionais subsequentes [@Weizenbaum1996].
+
+- AIML: Artificial Intelligence Markup Language, uma linguagem de
+  marcação baseada em XML [@Wallace2000]. Essa linguagem permite a
+  definição de regras de correspondência de padrões (pattern matching)
+  para mapear entradas do usuário a respostas predefinidas. O AIML é
+  amplamente utilizado na construção de chatbots, permitindo a criação
+  de diálogos complexos e interativos.
+
+- Modelos de Markov: introdução de técnicas de aprendizado de máquina,
+  como os modelos ocultos de Markov (HMMs) , que utilizam cadeias de
+  Markov para modelar sequências de palavras e prever a próxima palavra
+  em uma sequência.
+
+- Word2Vec: técnica de representação de palavras em vetores densos,
+  permitindo capturar semântica e relações entre palavras. Essa técnica
+  é frequentemente utilizada em chatbots para melhorar a compreensão do
+  contexto e a geração de respostas.
+
+- TransformersBERT: arquitetura de rede neural baseada em atenção, que
+  revolucionou o processamento de linguagem natural (NLP)
+  [@Vaswani2017]. Modelos como BERT e GPT são exemplos de arquiteturas
+  baseadas em Transformers que têm sido amplamente utilizadas em
+  chatbots modernos.
+
+- GPT: modelos de linguagem generativa, como o GPT-3 , que utilizam
+  redes neurais profundas para gerar texto coerente e relevante em
+  resposta a entradas do usuário. Esses modelos são treinados em grandes
+  quantidades de dados e podem ser adaptados para tarefas específicas,
+  como atendimento ao cliente ou suporte técnico.
 
 Além disso, diversos frameworks têm sido desenvolvidos para facilitar a
 criação desses agentes complexos, como CrewAI e bibliotecas associadas a

@@ -269,3 +269,27 @@ engine*) no *chatbot* pode então corresponder a intenção do usuário a
 fluxos de trabalho preconfigurados ou a regras de negócio específicas.
 Em alguns casos, a geração de linguagem natural (NLG), outro subcampo do
 PLN, é utilizada para formular a resposta do *chatbot* ao usuário.
+
+## Desafios da PLN
+
+- Geração de Texto coerente
+
+- Sintaxe e gramática
+
+- semântica
+
+- Contexto
+
+- Ambiguidade
+
+A Geração de Texto coerente é um desafio porque envolve não apenas a
+escolha de palavras, mas também a construção de frases que façam sentido
+no contexto da conversa. A sintaxe e gramática são importantes para
+garantir que o texto gerado seja gramaticalmente correto e
+compreensível. A semântica se refere ao significado das palavras e
+frases, e é importante para garantir que o texto gerado transmita a
+mensagem correta. O contexto é importante para entender o que foi dito
+anteriormente na conversa e como isso afeta a resposta atual. A
+ambiguidade pode surgir quando uma palavra ou frase tem múltiplos
+significados, tornando difícil para o modelo determinar qual
+interpretação é a correta.

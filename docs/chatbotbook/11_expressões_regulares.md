@@ -65,6 +65,9 @@ Um caso de uso comum em chatbots é a extração de endereços de e-mail do
 texto fornecido pelo usuário. O seguinte exemplo em Python demonstra
 como usar `re.findall` para realizar essa tarefa:
 
+[ ![image](./fig/colab-badge.png)
+](https://colab.research.google.com/github/giseldo/chatbotbook_v2/blob/main/notebook/cap11.ipynb)
+
 ``` {#lst:extracao_email .python language="Python" caption="Extração de e-mails com regex" label="lst:extracao_email"}
 import re
 
@@ -78,8 +81,8 @@ A saída deste código será:
 
     ['exemplo@email.com', 'suporte@outroemail.com']
 
-Este exemplo ilustra a eficácia das regex para identificar e extrair
-informações específicas de um texto.
+Este exemplo ilustra o uso regex para identificar e extrair informações
+específicas de um texto.
 
 ## Sintaxe de Expressões Regulares
 
@@ -87,8 +90,6 @@ A sintaxe das expressões regulares consiste em uma combinação de
 caracteres literais (que correspondem a si mesmos) e metacaracteres, que
 possuem significados especiais e permitem definir padrões de busca mais
 complexos. Alguns dos metacaracteres mais importantes incluem:
-
-## Casos de Uso Específicos em Chatbots
 
 As expressões regulares podem ser aplicadas em uma variedade de cenários
 no desenvolvimento de chatbots. A seguir, apresentamos alguns casos de
@@ -99,6 +100,9 @@ uso comuns com exemplos práticos em Python.
 Chatbots que lidam com agendamentos ou reservas frequentemente precisam
 validar se a data fornecida pelo usuário está em um formato correto. O
 seguinte exemplo demonstra como validar datas no formato DD/MM/AAAA:
+
+[ ![image](./fig/colab-badge.png)
+](https://colab.research.google.com/github/giseldo/chatbotbook_v2/blob/main/notebook/cap11_2.ipynb)
 
 ``` {#lst:validacao_data .python language="Python" caption="Validação de datas com regex" label="lst:validacao_data"}
 import re
@@ -116,11 +120,19 @@ for data in datas_teste:
 A saída deste código ilustra quais das strings de teste correspondem ao
 padrão de data especificado.
 
+    '31/12/2020' é uma data válida no formato DD/MM/AAAA.
+    '1/1/2021' não é uma data válida no formato DD/MM/AAAA.
+    '2023-05-10' não é uma data válida no formato DD/MM/AAAA.
+    '25/06/2025 10:00' é uma data válida no formato DD/MM/AAAA.
+
 ### Análise de Comandos
 
 Em interfaces de chatbot baseadas em texto, os usuários podem interagir
 através de comandos específicos, como `/ajuda` ou `/iniciar`. As regex
 podem ser usadas para detectar esses comandos de forma eficiente:
+
+[ ![image](./fig/colab-badge.png)
+](https://colab.research.google.com/github/giseldo/chatbotbook_v2/blob/main/notebook/cap11_3.ipynb)
 
 ``` {#lst:analise_comando .python language="Python" caption="Análise de comandos com regex" label="lst:analise_comando"}
 import re
@@ -138,12 +150,20 @@ for comando in comandos_teste:
 Este exemplo mostra como identificar strings que começam com uma barra
 seguida por um ou mais caracteres alfanuméricos.
 
+    '/ajuda' é um comando válido.
+    '/iniciar' é um comando válido.
+    'ajuda' não é um comando válido.
+    'iniciar/' não é um comando válido.
+
 ### Tokenização Simples
 
 Embora para tarefas complexas de PLN sejam utilizadas técnicas de
 tokenização mais avançadas, as regex podem ser úteis para realizar uma
 tokenização básica, dividindo o texto em palavras ou unidades menores
 com base em padrões de separação:
+
+[ ![image](./fig/colab-badge.png)
+](https://colab.research.google.com/github/giseldo/chatbotbook_v2/blob/main/notebook/cap11_4.ipynb)
 
 ``` {#lst:tokenizacao_simples .python language="Python" caption="Tokenização simples com regex" label="lst:tokenizacao_simples"}
 import re
@@ -156,11 +176,16 @@ print(tokens)
 A saída será uma lista de strings, onde o padrão `\W+` corresponde a um
 ou mais caracteres não alfanuméricos, utilizados como delimitadores.
 
+    ['Olá', 'como', 'vai', 'você', '']
+
 ### Limpeza de Texto
 
 Chatbots podem precisar processar texto que contém elementos
 indesejados, como tags HTML. As regex podem ser usadas para remover
 esses elementos:
+
+[ ![image](./fig/colab-badge.png)
+](https://colab.research.google.com/github/giseldo/chatbotbook_v2/blob/main/notebook/cap11_5.ipynb)
 
 ``` {#lst:limpeza_html .python language="Python" caption="Limpeza de texto removendo tags HTML" label="lst:limpeza_html"}
 import re
@@ -169,6 +194,8 @@ texto_html = "<p>Este é um parágrafo com <b>texto em negrito</b>.</p>"
 texto_limpo = re.sub(r'<[^>]+>', '', texto_html)
 print(texto_limpo)
 ```
+
+    Este é um parágrafo com texto em negrito.
 
 ## Aplicação em Frameworks de Chatbot
 
