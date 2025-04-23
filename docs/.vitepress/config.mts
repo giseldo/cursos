@@ -67,8 +67,8 @@ export default withMermaid({
             { text: 'Introdução', link: '/am/' },
             { text: 'Pag 2', link: '/am/cap2' },
             { text: 'Pag 3', link: '/am/cap3' },
-            { text: 'Pag 4', link: '/am/cap4' },
-            { text: 'Pag 4', link: '/am/cap5' }                        
+            { text: 'IA', link: '/am/ia' },
+            
           ]
         }
       ],
