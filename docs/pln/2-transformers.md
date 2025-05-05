@@ -18,11 +18,26 @@ Exemplos:
 
 O objeto mais básico na biblioteca Transformers é a função `pipeline()`. Ela conecta o modelo com seus passos necessários de pré e pós processamento, permitindo-nos diretamente inserir qualquer texto e obter uma resposta.
 
-<a target="_blank" href="https://colab.research.google.com/github/https://colab.research.google.com/drive/1BctAyiLiAerEyZxo3JwNqwcBXONv3D_t?usp=sharing">
+Antes instale as dependências necessárias no python
+
+```shell
+%pip install transformers
+%pip install torch
+```
+
+Para alguns modelos, antes é necessário efetuar o login no Hugging Face. Você cria uma chave de api no site do Hugging Face e depois no terminal digital 
+
+```shell
+# Faça login no Hugging Face para acessar modelos privados e informe a chave quando solicitado
+huggingface-cli login
+```
+
+<a target="_blank" href="https://colab.research.google.com/github/giseldo/cursos/docs/pln/notebook/transformer.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-```Python {filename="main.py"}
+```Python
+# classificador de sentimentos em textos em inglês
 from transformers import pipeline
 
 classifier = pipeline("sentiment-analysis")
@@ -33,14 +48,12 @@ classifier("I've bee waiting for a HuggingFace course my whole life.")
 [{'label': 'POSITIVE', 'score': 0.9516071081161499}]
 ```
 
-:::info
-O modelo cacheado default utilizado foi o _distilbert/distilbert-base-uncased-finetuned-sst-2-english_
-:::
+O modelo cacheado default utilizado foi o _distilbert/distilbert-base-uncased-finetuned-sst-2-english_ , no momento em que est material foi elaborado, mas ele pode ter mudado.
 
-Também podemos passar mais de uma sentença.
+Também podemos passar mais de uma sentença para o classificador.
 
 <a target="_blank" href="https://colab.research.google.com/github/https://colab.research.google.com/drive/1BctAyiLiAerEyZxo3JwNqwcBXONv3D_t?usp=sharing">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  <img src="https:e/colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
 ```Python {filename="main.py"}
@@ -59,6 +72,19 @@ classifier([
 ```
 
 Por padrão, esse pipeline seleciona particularmente um modelo pré-treinado que tem sido _ajustado_ (fine-tuned) para análise de sentimentos em inglês. O modelo é baixado e cacheado quando você cria o objeto `classifier`. Se você rodar novamente o comando, o modelo cacheado será usado e não será baixado  novamente.
+
+Agora um exemplo em português, desta vez informando um modelo que suporta o português brasileiro.
+
+```Python
+# exemplo em portugues brasileiro
+from transformers import pipeline
+
+classifier = pipeline("sentiment-analysis", model="clapAI/modernBERT-large-multilingual-sentiment")
+
+saida = classifier("Eu estou feliz.")
+```
+
+##  Pipeline
 
 Há três principais passos envolvidos quando você passa algum texto para um pipeline:
 
