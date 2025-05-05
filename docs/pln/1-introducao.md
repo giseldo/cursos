@@ -5,8 +5,8 @@ Processamento de Linguagem Natural (PLN) é um campo da linguística e da aprend
 
 A seguir uma lista de tarefas comuns de NLP, com alguns exemplos.
 
-* Classificação de sentenças completas
-  * Capturar o sentimento de uma sentenca, relacionado por exemplo a revisão de determinado produto;
+* Classificação de sentenças
+  * Capturar o sentimento de uma sentença, relacionado por exemplo a revisão de determinado produto;
   * Detectar se um email é spam ou não;
   * Determinar se uma sentença é gramaticalmente correta;
   * Determinar se duas sentencas são logicamente relacionadas ou não.
@@ -30,4 +30,4 @@ PLN não se limita ao texto escrito. Também engloba desafios complexos nos camp
 
 ## Por que isso é desafiador?
 
-Os computadores não processam a informação da mesma forma que os seres humanos. Por exemplo, quando nós lemos a sentença "estou com fome", nós podemos facilmente entender seu significado. Similarmente, dada duas sentenças como "Estou com fome" e "Estou triste", nós somos capazes de facilmente determinar quão similares elas são. Para modelos de Aprendizagem de Máquina (ML), tarefas como essas são mais difíceis. O texto precisa ser processado de um modo que possibilite ao modelo aprender. E porque a linguagem é complexa, nós precisamos pensar cuidadosamente como esse processamento tem que ser feito. Várias formas de representação de texto existem. Iremos observar alguns desses métodos no próximo capítulo.
+Os computadores não processam a informação da mesma forma que os seres humanos. Por exemplo, quando nós lemos a sentença "estou com fome", nós podemos facilmente entender seu significado. Similarmente, dada duas sentenças como "Estou com disposição" e "Estou alegre", nós somos capazes de facilmente determinar quão similares elas são. Para modelos de Aprendizagem de Máquina (ML), tarefas como essas são mais difíceis. O texto precisa ser processado de um modo que possibilite ao modelo aprender. E porque a linguagem é complexa, nós precisamos pensar cuidadosamente como esse processamento tem que ser feito. Várias formas de representação de texto existem. 

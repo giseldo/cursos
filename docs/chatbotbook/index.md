@@ -2,7 +2,7 @@
 
 Autor: Giseldo Neo & Alana Neo
 
-Para navegar entre os capítulos, utilize as setas de navegação esquerda e direita.
+Para navegar entre os capítulos, utilize as setas de navegação do teclado, esquerda e direita.
 
 <div style="display: flex; gap: 10px; align-items: center;">
   <img src="./fig/esquerda.jpg" style="width:5%" alt="image" />
