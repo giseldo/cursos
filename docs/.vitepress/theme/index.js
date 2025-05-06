@@ -2,6 +2,8 @@ import DefaultTheme from 'vitepress/theme';
 
 import Tts from './components/Tts.vue'
 
+import ColabButton from './components/ColabButton.vue'
+
 import './custom.css'
 
 export default {
@@ -9,6 +11,7 @@ export default {
   
   enhanceApp({ app, router }) {
     app.component('Tts', Tts);
+    app.component('ColabButton', ColabButton);
 
     if (typeof window !== 'undefined') {
       // Adiciona o evento para capturar teclas pressionadas

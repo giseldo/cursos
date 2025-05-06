@@ -31,3 +31,18 @@ PLN não se limita ao texto escrito. Também engloba desafios complexos nos camp
 ## Por que isso é desafiador?
 
 Os computadores não processam a informação da mesma forma que os seres humanos. Por exemplo, quando nós lemos a sentença "estou com fome", nós podemos facilmente entender seu significado. Similarmente, dada duas sentenças como "Estou com disposição" e "Estou alegre", nós somos capazes de facilmente determinar quão similares elas são. Para modelos de Aprendizagem de Máquina (ML), tarefas como essas são mais difíceis. O texto precisa ser processado de um modo que possibilite ao modelo aprender. E porque a linguagem é complexa, nós precisamos pensar cuidadosamente como esse processamento tem que ser feito. Várias formas de representação de texto existem. 
+
+## Empresas
+
+Aqui estão algumas empresas e organizações usando a Hugging Face e os modelos `transformers`. Estas empresas também contribuem de volta para a comunidade compartilhando seus modelos.
+
+- Facebook - 23 modelos
+- Microsoft - 33 modelos
+- Grammarly - 1 modelo
+- Google - 115 modelos
+- Asteroid-team - 1 modelo
+- Allen Institute - 43 modelos
+- Typerform 
+- Deepseek 
+- Alibaba - Qwen
+
