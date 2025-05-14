@@ -33,11 +33,12 @@ export default withMermaid({
           text: 'Frameworks',
           items: [
             { text: 'Início', link: '/frameworks/' },
-            { text: 'Objeto Relacional', link: '/1-objeto-relacional/' },
-            { text: 'Persistencia', link: '/2-persistencia/' },
-            { text: 'MVC', link: '/4-MVC/' },
-            { text: 'Frameworks', link: '/5-Frameworks/' },
-            { text: 'REST', link: '/6-REST/' }
+            { text: 'Mapeamento Objeto Relacional', link: '/frameworks/1-objeto-relacional' },
+            { text: 'Persistencia', link: '/frameworks/2-persistencia' },
+            { text: 'Padrões', link: '/frameworks/3-padroes' },
+            { text: 'MVC', link: '/frameworks/4-MVC' },
+            { text: 'Frameworks', link: '/frameworks/5-Frameworks' },
+            { text: 'REST', link: '/frameworks/6-REST' }
           ]
         }
       ],
