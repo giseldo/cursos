@@ -54,7 +54,7 @@ falso = False
 
 3. Crie um programa que converta uma temperatura de Celsius para Fahrenheit (F = C * 9/5 + 32).
 
-## Soluções dos Exercícios
+<!-- ## Soluções dos Exercícios
 
 ### Exercício 1
 ```python
@@ -82,4 +82,4 @@ celsius = 30
 fahrenheit = celsius * 9/5 + 32
 
 print(f"{celsius}°C é igual a {fahrenheit}°F")
-``` 
+```  -->

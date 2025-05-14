@@ -30,9 +30,18 @@ export default withMermaid({
 
       '/streamlit/': [
         {
-          text: 'streamlit',
+          text: 'Streamlit',
           items: [
-            { text: 'Index', link: '/streamlit/' }
+            { text: 'Início', link: '/streamlit/' }
+          ]
+        }
+      ],
+
+      '/gradioo/': [
+        {
+          text: 'Gradio',
+          items: [
+            { text: 'Início', link: '/gradio/' }
           ]
         }
       ],
@@ -41,7 +50,7 @@ export default withMermaid({
         {
           text: 'Python',
           items: [
-            { text: 'Index', link: '/python/' },
+            { text: 'Início', link: '/python/' },
             { text: 'Introdução', link: '/python/1-introducao' },
             { text: 'Definições e contexto', link: '/python/2-estruturas_controle' },
             { text: 'ELIZA o primeiro chatbot', link: '/python/3-funcoes_modulos' },
@@ -53,7 +62,7 @@ export default withMermaid({
 
       '/chatbotbook/': [
         {
-          text: 'Chatbotbook',
+          text: 'Chatbot',
           items: [
             { text: 'Index', link: '/chatbotbook/' },
             { text: 'Definições e contexto', link: '/chatbotbook/1_chatbots_definições_e_contexto' },

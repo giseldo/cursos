@@ -16,6 +16,11 @@ features:
     link: /streamlit/
     linkText: Leia mais
 
+  - title: Gradio
+    details: 
+    link: /gradio/
+    linkText: Leia mais
+
   - title: Chatbot
     details: 
     link: /chatbotbook/
