@@ -52,6 +52,3 @@ Cada módulo contém:
 - Exercícios práticos
 - Soluções dos exercícios
 
-## Contribuição
-
-Sinta-se à vontade para contribuir com melhorias, correções ou novos exercícios através de pull requests.

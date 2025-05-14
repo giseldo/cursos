@@ -28,7 +28,7 @@ export default withMermaid({
 
     sidebar: {
 
-      '/Python/': [
+      '/python/': [
         {
           text: 'Python',
           items: [
