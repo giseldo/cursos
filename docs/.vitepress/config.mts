@@ -28,6 +28,20 @@ export default withMermaid({
 
     sidebar: {
 
+      '/Python/': [
+        {
+          text: 'Python',
+          items: [
+            { text: 'Index', link: '/python/' },
+            { text: 'Introdução', link: '/python/1-introducao' },
+            { text: 'Definições e contexto', link: '/python/2-estruturas_controle' },
+            { text: 'ELIZA o primeiro chatbot', link: '/python/3-funcoes_modulos' },
+            { text: 'Artificial Intelligence Markup Language', link: '/python/4-estruturas_dados' },
+            { text: 'Processamento de Linguagem Natural', link: '/python/5-manipulacao_arquivos' }
+          ]
+        }
+      ],
+
       '/chatbotbook/': [
         {
           text: 'Chatbotbook',
