@@ -28,6 +28,15 @@ export default withMermaid({
 
     sidebar: {
 
+       '/frameworks/': [
+        {
+          text: 'Frameworks',
+          items: [
+            { text: 'Início', link: '/frameworks/' }
+          ]
+        }
+      ],
+
       '/streamlit/': [
         {
           text: 'Streamlit',

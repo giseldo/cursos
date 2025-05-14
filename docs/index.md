@@ -6,6 +6,12 @@ hero:
   name: "Neo Cursos"
   text: "Cursos em inteligência artificial"
 features:
+
+  - title: Frameworks
+    details: 
+    link: /frameworks/
+    linkText: Leia mais
+
   - title: Python
     details: 
     link: /python/
