@@ -2,6 +2,15 @@
 
 Este é um curso introdutório de Python, projetado para iniciantes que desejam aprender os fundamentos da linguagem.
 
+:::info
+<div style="display: flex; gap: 10px; align-items: center;">
+  <img src="./fig/esquerda.jpg" style="width:5%" alt="image" />
+  <img src="./fig/direita.jpg" style="width:5%" alt="image" />
+  Você pode usar as setas do teclado para navegar entre as seções.
+</div>
+:::
+
+
 ## Estrutura do Curso
 
 O curso está dividido em módulos, cada um focado em um aspecto específico da linguagem Python:

@@ -1,5 +1,9 @@
 # Como criar um chatbot com o Gradio
 
+::: info
+Esta é uma tradução livre para o português brasileiro e com algumas alterações do excelente material construído pela equipe do [Gradio](https://www.gradio.app/guides/creating-a-chatbot-fast).
+:::
+
 ## Introdução
 
 Chatbots são aplicações populares de _Large Language Models_ (LLMs). Usando o Gradio, você pode facilmente construir uma demonstração de uso de um LLM e compartilhar com outros usuários, ou você pode conversar com o chatbot você mesmo utilizando uma intuitiva interface de conversação com o chatbot.

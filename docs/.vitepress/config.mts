@@ -32,7 +32,12 @@ export default withMermaid({
         {
           text: 'Frameworks',
           items: [
-            { text: 'Início', link: '/frameworks/' }
+            { text: 'Início', link: '/frameworks/' },
+            { text: 'Objeto Relacional', link: '/1-objeto-relacional/' },
+            { text: 'Persistencia', link: '/2-persistencia/' },
+            { text: 'MVC', link: '/4-MVC/' },
+            { text: 'Frameworks', link: '/5-Frameworks/' },
+            { text: 'REST', link: '/6-REST/' }
           ]
         }
       ],
@@ -61,10 +66,10 @@ export default withMermaid({
           items: [
             { text: 'Início', link: '/python/' },
             { text: 'Introdução', link: '/python/1-introducao' },
-            { text: 'Definições e contexto', link: '/python/2-estruturas_controle' },
-            { text: 'ELIZA o primeiro chatbot', link: '/python/3-funcoes_modulos' },
-            { text: 'Artificial Intelligence Markup Language', link: '/python/4-estruturas_dados' },
-            { text: 'Processamento de Linguagem Natural', link: '/python/5-manipulacao_arquivos' }
+            { text: 'Esturuturas de controle', link: '/python/2-estruturas_controle' },
+            { text: 'Funções e módulos', link: '/python/3-funcoes_modulos' },
+            { text: 'Estrutura de dados', link: '/python/4-estruturas_dados' },
+            { text: 'Manipulação de arquivos', link: '/python/5-manipulacao_arquivos' }
           ]
         }
       ],
@@ -158,8 +163,8 @@ export default withMermaid({
         {
           text: 'Chatbot',
           items: [
-            { text: 'Sobre', link: '/chatbot/' },
-            { text: 'Como criar um chatbot', link: '/chatbot/1-como-criar' }
+            { text: 'Início', link: '/chatbot/' },
+            { text: 'Gradio', link: '/chatbot/gradio' }
           ]
         }
       ],

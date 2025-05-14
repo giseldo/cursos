@@ -15,7 +15,7 @@ Python é uma linguagem de programação de alto nível, interpretada e de prop�
 
 Vamos criar nosso primeiro programa em Python:
 
-```python
+```Python
 print("Olá, Mundo!")
 ```
 
@@ -24,7 +24,7 @@ Este programa simples imprime a mensagem "Olá, Mundo!" na tela.
 ## Variáveis e Tipos de Dados Básicos
 
 ### Números
-```python
+```Python
 # Inteiros
 idade = 25
 quantidade = 10
@@ -35,7 +35,7 @@ pi = 3.14159
 ```
 
 ### Strings (Texto)
-```python
+```Python
 nome = "João"
 mensagem = 'Olá, como vai?'
 ```

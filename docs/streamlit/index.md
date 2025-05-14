@@ -1,12 +1,4 @@
-# Curso Completo de Streamlit 🚀
-
-## Índice
-1. [Introdução ao Streamlit](#introdução-ao-streamlit)
-2. [Instalação e Configuração](#instalação-e-configuração)
-3. [Componentes Básicos](#componentes-básicos)
-4. [Visualização de Dados](#visualização-de-dados)
-5. [Layout e Estilização](#layout-e-estilização)
-6. [Projeto Final](#projeto-final)
+# Curso Completo de Streamlit
 
 ## Introdução ao Streamlit
 

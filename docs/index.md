@@ -26,8 +26,13 @@ features:
     details: 
     link: /gradio/
     linkText: Leia mais
-
+  
   - title: Chatbot
+    details: 
+    link: /chatbot/
+    linkText: Leia mais
+
+  - title: Chatbot Livro
     details: 
     link: /chatbotbook/
     linkText: Leia mais
@@ -41,11 +46,6 @@ features:
     details: 
     link: /transformers/
     linkText: Leia mais
-
-  # - title: PLN (medium)
-  #   details: 
-  #   link: /nlp/
-  #   linkText: Leia mais
 
   - title: Regressao Linear com Python
     details: 
@@ -70,6 +70,11 @@ features:
   # - title: Articles
   #   details: 
   #   link: /articles/
+  #   linkText: Leia mais
+
+  # - title: PLN (medium)
+  #   details: 
+  #   link: /nlp/
   #   linkText: Leia mais
     
 ---
