@@ -5,16 +5,7 @@ title: Desenvolvimento de Sistemas com Frameworks
 
 # Desenvolvimento de Sistemas com Frameworks
 
-
-[Introdução](#introducao){.w3-bar-item .w3-button}
-[ORM](#orm){.w3-bar-item .w3-button} [Padrões de
-Persistência](#persistencia){.w3-bar-item .w3-button} [Padrões de
-Projeto](#padroes){.w3-bar-item .w3-button} [MVC](#mvc){.w3-bar-item
-.w3-button} [Frameworks Desktop](#desktop){.w3-bar-item .w3-button}
-[REST API](#rest){.w3-bar-item .w3-button}
-
-
-## Introdução ao Desenvolvimento com Frameworks
+ ## Introdução ao Desenvolvimento com Frameworks
 
 Criado por Alana Neo.
 
