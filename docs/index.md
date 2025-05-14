@@ -11,17 +11,22 @@ features:
     link: /python/
     linkText: Leia mais
 
-  - title: Chatbot Book
+  - title: StreamLit
+    details: 
+    link: /streamlit/
+    linkText: Leia mais
+
+  - title: Chatbot
     details: 
     link: /chatbotbook/
     linkText: Leia mais
 
-  - title: PLN (Hugging Face)
+  - title: Processament de Linguagem Natural
     details: 
     link: /pln/
     linkText: Leia mais
 
-  - title: Transformers Quickstart (Hugging Face)
+  - title: Transformers
     details: 
     link: /transformers/
     linkText: Leia mais
@@ -36,7 +41,7 @@ features:
     link: /regressao/
     linkText: Leia mais
 
-  - title: Estatística e AM com Python
+  - title: Estatística e Aprendizagem de Máquina com Python
     details: 
     link: /estatistica/
     linkText: Leia mais

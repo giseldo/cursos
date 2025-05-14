@@ -28,6 +28,15 @@ export default withMermaid({
 
     sidebar: {
 
+      '/streamlit/': [
+        {
+          text: 'streamlit',
+          items: [
+            { text: 'Index', link: '/streamlit/' }
+          ]
+        }
+      ],
+
       '/python/': [
         {
           text: 'Python',
