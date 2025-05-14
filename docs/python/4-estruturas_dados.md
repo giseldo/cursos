@@ -105,7 +105,7 @@ numeros.remove(1)
 
 4. Faça um programa que simule uma agenda de contatos usando um dicionário.
 
-## Soluções dos Exercícios
+<!-- ## Soluções dos Exercícios
 
 ### Exercício 1
 ```python
@@ -207,4 +207,4 @@ agenda = Agenda()
 agenda.adicionar_contato("João", "123-456", "joao@email.com")
 agenda.adicionar_contato("Maria", "789-012", "maria@email.com")
 print(agenda.listar_contatos())
-``` 
+```  -->

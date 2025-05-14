@@ -72,7 +72,7 @@ while contador < 5:
 
 4. Faça um programa que simule um jogo de adivinhação, onde o computador escolhe um número entre 1 e 100, e o usuário tenta adivinhar.
 
-## Soluções dos Exercícios
+<!-- ## Soluções dos Exercícios
 
 ### Exercício 1
 ```python
@@ -117,4 +117,4 @@ while True:
     else:
         print(f"Parabéns! Você acertou em {tentativas} tentativas!")
         break
-``` 
+```  -->

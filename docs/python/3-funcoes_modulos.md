@@ -90,7 +90,7 @@ resultado = soma(5, 3)
 
 4. Faça um programa que use o módulo `geometria.py` para calcular e exibir as áreas de diferentes formas.
 
-## Soluções dos Exercícios
+<!-- ## Soluções dos Exercícios
 
 ### Exercício 1
 ```python
@@ -139,4 +139,4 @@ from geometria import area_circulo, area_retangulo, area_triangulo
 # Calculando áreas
 print(f"Área do círculo (raio 5): {area_circulo(5):.2f}")
 print(f"Área do retângulo (5x3): {area_retangulo(5, 3)}")
-print(f"Área do triângulo (base 4, altura 6): {area_triangulo(4, 6)}") 
+print(f"Área do triângulo (base 4, altura 6): {area_triangulo(4, 6)}")  -->

@@ -86,7 +86,7 @@ with open('dados.json', 'r', encoding='utf-8') as arquivo:
 
 4. Faça um programa que copie o conteúdo de um arquivo para outro, adicionando numeração nas linhas.
 
-## Soluções dos Exercícios
+<!-- ## Soluções dos Exercícios
 
 ### Exercício 1
 ```python
@@ -188,4 +188,4 @@ def copiar_arquivo_numerado(origem, destino):
 
 # Testando
 copiar_arquivo_numerado('texto.txt', 'texto_numerado.txt')
-``` 
+```  -->
