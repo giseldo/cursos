@@ -5,7 +5,6 @@ Os modelos treinados disponíveis na API `transformers` são usados para muitas 
 A biblioteca [transformers](https://github.com/huggingface/transformers) oferece a funcionalidade para criar e usar esses modelos compartilhados. O [Hugging Face Model Hub](https://huggingface.co/models) contém milhares de modelos pré-treinados que qualquer um pode baixar e usar. 
 
 O [Hugging Face Model Hub](https://huggingface.co/models) não é limitado aos modelos `transformers`. Qualquer um pode compartilhar quaisquer tipos de modelos ou datasets que quiserem! Você mesmo pode fazer  upload nos seus próprios modelos no Hub!
-
 :::info
 Veja os modelos que Giseldo Neo já hospedou no Hugging Face, acessando o link http://huggingface.co/giseldo
 :::
@@ -13,6 +12,8 @@ Veja os modelos que Giseldo Neo já hospedou no Hugging Face, acessando o link h
 ## Pipeline
 
 O objeto mais básico na biblioteca `transformers` é a função `pipeline()`. Ela conecta o modelo com seus passos necessários de **pré** e **pós** processamento. Permitindo com facilidade inserir uma sentença ou texto e obter uma resposta da tarefa de PLN selecionada.
+
+![alt text](fig/pipe.png)
 
 Há três principais passos envolvidos quando você passa algum texto para um pipeline:
 
@@ -22,15 +23,16 @@ Há três principais passos envolvidos quando você passa algum texto para um pi
 
 Alguns dos pipelines disponíveis atualmente, são:
 
-- Análise de sentimentos `sentiment-analysis` 
-- Classificação zero-shot `zero-shot-classification`
-- Geração de texto `text-generation`
-- Extrair representação vetorial do texto `feature-extraction`
-- Sumarização `summarization`
-- Tradução `translation`
-- Responder perguntas `question-answering`
-- Preenchimento de máscara `fill-mask`
-- Reconhecimento de entidades nomeadas `ner`
+1. Análise de sentimentos `sentiment-analysis` 
+2. Classificação zero-shot `zero-shot-classification`
+3. Geração de texto `text-generation`
+4. Preenchimento de máscara `fill-mask`
+5. Reconhecimento de entidades nomeadas `ner`
+6. Responder perguntas `question-answering`
+7. Tradução `translation`
+8. Sumarização `summarization`
+
+<!-- 4. Extrair representação vetorial do texto `feature-extraction` -->
 
 
 Para alguns modelos, antes é necessário efetuar o login no Hugging Face. Você cria uma chave de api no site do Hugging Face e depois no terminal digital 
@@ -41,7 +43,7 @@ Para alguns modelos, antes é necessário efetuar o login no Hugging Face. Você
 huggingface-cli login
 ```
 
-## Análise de sentimento
+## 1. Análise de sentimento
 
 ### Exemplo 1 - Análise de sentimento de uma sentença
 
@@ -119,7 +121,7 @@ saida = classifier("Eu estou feliz.")
 [{'label': 'positive', 'score': 0.8990556597709656}]
 ```
 
-## Classificação Zero-shot
+## 2. Classificação Zero-shot
 
 Esse é um cenário comum em alguns projetos porque anotar texto geralmente consome bastante tempo e requer expertize no domínio. Para esse caso, o pipeline `zero-sho-classification` é muito poderoso: permite você especificar quais os rótulos usar para a classificação, desse modo você não precisa "confiar" nos rótulos pré-treinados. Você já viu como um modelo pode classificar uma sentença como positiva ou negativa usando esses dois rótulos - mas também pode ser classificado usando qualquer outro conjunto de rótulos que você quiser.
 
@@ -143,7 +145,7 @@ O modelo padrão para a tarefa `zero-shot-classification` quiando não informado
 
 Esse pipeline é chamado de _zero-shot_ porque você não precisa fazer o ajuste fino do modelo nos dados que você o utiliza.
 
-## Geração de Texto
+## 3. Geração de Texto
 
 A principal ideia aqui é que você coloque um pedaço de texto e o modelo irá autocompletá-lo ao gerar o texto restante.
 Isso é similar ao recurso de predição textual que é encontrado em inúmeros celulares.
@@ -227,7 +229,7 @@ Experimente! Use os filtros para encontrar um modelo de geração de texto em ou
 
 Uma vez que você seleciona o modelo clikando nele, você irá ver que há um widget que permite que você teste-o diretamente online. Desse modo você pode rapidamente testar as capacidades do modelo antes de baixá-lo. Veja na figura a seguir.
 
-## Preenchimento de máscara
+## 4. Preenchimento de máscara
 
 O próximo pipeline que você irá testar é o fill-mask. A ideia dessa tarefa é preencher os espaços em branco com um texto dado:
 
@@ -270,7 +272,7 @@ unmasker = pipeline("fill-mask",
 unmasker("This course will teach you all about <mask> models.", top_k=2)
 ```
 
-## Reconhecimento de entidades nomeadas
+## 5. Reconhecimento de entidades nomeadas
 
 Reconhecimento de Entidades Nomeadas (NER) é uma tarefa onde o modelo tem de achar quais partes do texto correspondem a entidades como pessoas, locais, organizações. Vamos olhar em um exemplo:
 
@@ -298,7 +300,7 @@ Nós passamos a opção `grouped_entities=True` na criação da função do pipe
 Experimente! Procure no [Hugging Face Model Hub](https://huggingface.co/models) por um modelo capaz de fazer o tageamento de partes do discurso (usualmente abreviado como POS) em inglês. O que o modelo prediz para a sentença no exemplo acima?
 :::
 
-## Responder perguntas
+## 6. Responder perguntas
 
 O pipeline question-answering responde perguntas usando informações dado um contexto:
 
@@ -320,7 +322,7 @@ question_answerer(
 
 Note que o pipeline funciona através da extração da informação dado um contexto; não gera uma resposta.
 
-## Sumarização
+## 7. Sumarização
 
 Sumarização é uma tarefa de reduzir um texto em um texto menor enquanto pega toda (ou boa parte) dos aspectos importantes do texto referenciado. Aqui um exemplo:
 
@@ -364,7 +366,7 @@ summarizer(
 
 Como a geração de texto, você pode especificar o tamanho máximo `max_length` ou mínimo `min_length` para o resultado.
 
-## Tradução
+## 9. Tradução
 
 Para tradução, você pode usar o modelo default se você der um par de idiomas no nome da tarefa (tal como "translation_en_to_fr", para traduzir inglês para francês), mas a maneira mais fácil é pegar o moddelo que você quiser e usa-lo no [Hugging Face Model Hub](https://huggingface.co/models). Aqui nós iremos tentar traduzir do Francês para o Inglês:
 

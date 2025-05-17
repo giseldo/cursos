@@ -7,25 +7,26 @@ A seguir uma lista de tarefas comuns de NLP, com alguns exemplos.
 
 ![alt text](fig/tasks_pln.png)
 
-* Classificação de sentenças (_text_classification_)
+* Classificação de sentenças 
   * Capturar o sentimento de uma sentença, relacionado por exemplo a revisão de determinado produto; (_sentiment_analisys_)
-  * Detectar se um email é spam ou não;
-  * Determinar se uma sentença é gramaticalmente correta;
+  * Detectar se um email é spam ou não; (_text_classification_)
+  * Determinar se uma sentença é gramaticalmente correta; 
   * Determinar se duas sentencas são logicamente relacionadas ou não.
 
-* Classificação de cada palavra em uma sentença (*named_entity_recognition*)
+* Classificação de cada palavra em uma sentença 
   * Identificar os componentes gramaticais de uma sentença, por exemplo, substantivo, verbo, adjetivo;
-  * Identificar as entidades nomeadas, por exemplo, pessoa, local, organização;
+  * Identificar as entidades nomeadas, por exemplo, pessoa, local, organização; (*named_entity_recognition*)
 
-* Extrair uma resposta de um texto (*question_answering*)
-  * Dada uma pergunta e um contexto, extrair a resposta baseada na informação passada no contexto.
+* Extrair uma resposta de um texto 
+  * Dada uma pergunta e um contexto, extrair a resposta baseada na informação passada no contexto. (*question_answering*)
 
-* Gerar uma nova sentença a partir de uma entrada de texto (_text_generation_)
-  * Traduzir a sentença para outro idioma
-  * resumir um texto
+* Gerar uma nova sentença a partir de uma entrada de texto
+  * Traduzir a sentença para outro idioma (_translation_)
+  * resumir um texto (_sumarization_)
 
-* Geração de conteúdo textual (_fill-mask_)
-  * completar um trecho com autogeração textual, preenchendo as lacunas em um texto com palavas mascaradas
+* Geração de conteúdo textual 
+  * Completar um trecho com autogeração textual (_fill-mask_)
+  * Preencher as lacunas em um texto com palavas mascaradas (_fill-mask_)
 
 PLN não se limita ao texto escrito. Também engloba desafios complexos nos campos de reconhecimento de discurso e visão computacional, tal como a geração de transcrição de uma amostra de áudio ou a descrição de uma imagem.
 

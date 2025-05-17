@@ -1,6 +1,7 @@
 # Como os Transformers trabalham?
 
-::: esta é uma versão com pequenas alterações do material original, consulte o material original, criado pela equipe do Hugging Face [aqui](https://moon-ci-docs.huggingface.co/learn/nlp-course/pr_740/pt/chapter1/4?fw=pt).
+::: info
+esta é uma versão com pequenas alterações do material original, consulte o material original, criado pela equipe do Hugging Face [aqui](https://moon-ci-docs.huggingface.co/learn/nlp-course/pr_740/pt/chapter1/4?fw=pt).
 :::
 
 Nessa seção, nós olharemos para o alto nível de arquitetura dos modelos Transformers.
@@ -13,10 +14,7 @@ A arquitetura tranformer não é a mesma coisa da api `transformer` da seção a
 
 Aqui alguns pontos de referência na (pequena) história dos modelos Transformers:
 
-<div class="flex justify-center">
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers_chrono.svg" alt="A brief chronology of Transformers models.">
-<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers_chrono-dark.svg" alt="A brief chronology of Transformers models.">
-</div>
 
 A [arquitetura Transformer](https://arxiv.org/abs/1706.03762) foi introduzida em Junho de 2017. O foco de pesquisa original foi para tarefas de tradução. Isso foi seguido pela introdução de muitos modelos influentes, incluindo:
 
@@ -50,34 +48,20 @@ Este tipo de modelo desenvolve uma compreensão estatística da linguagem em que
 
 Um exemplo de tarefa é prever a próxima palavra em uma frase depois de ler as *n* palavras anteriores. Isso é chamado de *modelagem de linguagem causal* porque a saída depende das entradas passadas e presentes, mas não das futuras.
 
-<div class="flex justify-center">
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/causal_modeling.svg" alt="Example of causal language modeling in which the next word from a sentence is predicted.">
-<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/causal_modeling-dark.svg" alt="Example of causal language modeling in which the next word from a sentence is predicted.">
-</div>
 
 Outro exemplo é a *modelagem de linguagem mascarada*, na qual o modelo prevê uma palavra mascarada na frase.
 
-<div class="flex justify-center">
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/masked_modeling.svg" alt="Example of masked language modeling in which a masked word from a sentence is predicted.">
-<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/masked_modeling-dark.svg" alt="Example of masked language modeling in which a masked word from a sentence is predicted.">
-</div>
-
 ## Transformers são modelos grandes
 
 Além de alguns outliers (como o DistilBERT), a estratégia geral para obter melhor desempenho é aumentar os tamanhos dos modelos, bem como a quantidade de dados em que são pré-treinados.
 
-<div class="flex justify-center">
 <img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/model_parameters.png" alt="Number of parameters of recent Transformers models" width="90%">
-</div>
 
 Infelizmente, treinar um modelo, especialmente um grande, requer uma grande quantidade de dados. Isso se torna muito caro em termos de tempo e recursos de computação. Até se traduz em impacto ambiental, como pode ser visto no gráfico a seguir.
 
-<div class="flex justify-center">
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/carbon_footprint.svg" alt="The carbon footprint of a large language model.">
-<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/carbon_footprint-dark.svg" alt="The carbon footprint of a large language model.">
-</div>
-
-<Youtube id="ftWlj4FBHTg"/>
 
 E isso mostra um projeto para um modelo (muito grande) liderado por uma equipe que tenta conscientemente reduzir o impacto ambiental do pré-treinamento. Os gastos de executar muitos testes para obter os melhores hiperparâmetros seria ainda maior.
 
@@ -87,8 +71,6 @@ Imagine se cada vez que uma equipe de pesquisa, uma organização estudantil ou 
 
 
 ## Transferência de Aprendizagem
-
-<Youtube id="BqqfQnyjmgg" />
 
 ![alt text](fig/preajsute.png)
 
@@ -109,10 +91,7 @@ Esse pré-treinamento geralmente é feito em grandes quantidades de dados. Porta
 
 Por exemplo, pode-se alavancar um modelo pré-treinado treinado no idioma inglês e depois ajustá-lo em um corpus arXiv, resultando em um modelo baseado em ciência/pesquisa. O ajuste fino exigirá apenas uma quantidade limitada de dados: o conhecimento que o modelo pré-treinado adquiriu é "transferido", daí o termo *aprendizagem de transferência*.
 
-<div class="flex justify-center">
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/finetuning.svg" alt="The fine-tuning of a language model is cheaper than pretraining in both time and money.">
-<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/finetuning-dark.svg" alt="The fine-tuning of a language model is cheaper than pretraining in both time and money.">
-</div>
 
 O ajuste fino de um modelo, portanto, tem menores custos de tempo, dados, financeiros e ambientais. Também é mais rápido e fácil iterar em diferentes esquemas de ajuste fino, pois o treinamento é menos restritivo do que um pré-treinamento completo.
 
@@ -122,8 +101,6 @@ Esse processo também alcançará melhores resultados do que treinar do zero (a 
 
 Nesta seção, veremos a arquitetura geral do modelo Transformer.
 
-<Youtube id="H39Z_720T5s" />
-
 ## Introdução
 
 O modelo é principalmente composto por dois blocos:
@@ -131,10 +108,8 @@ O modelo é principalmente composto por dois blocos:
 * **Codificador (esquerda)**: O codificador recebe uma entrada e constrói uma representação dela (seus recursos). Isso significa que o modelo é otimizado para adquirir entendimento da entrada.
 * **Decodificador (à direita)**: O decodificador usa a representação do codificador (recursos) junto com outras entradas para gerar uma sequência de destino. Isso significa que o modelo é otimizado para gerar saídas.
 
-<div class="flex justify-center">
+
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers_blocks.svg" alt="Architecture of a Transformers models">
-<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers_blocks-dark.svg" alt="Architecture of a Transformers models">
-</div>
 
 Cada uma dessas partes pode ser usada de forma independente, dependendo da tarefa:
 
@@ -164,10 +139,7 @@ Para acelerar as coisas durante o treinamento (quando o modelo tem acesso às fr
 
 A arquitetura original do Transformer ficou assim, com o codificador à esquerda e o decodificador à direita:
 
-<div class="flex justify-center">
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers.svg" alt="Architecture of a Transformers models">
-<img class="hidden dark:block" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers-dark.svg" alt="Architecture of a Transformers models">
-</div>
 
 Observe que a primeira camada de atenção em um bloco decodificador presta atenção a todas as entradas (passadas) do decodificador, mas a segunda camada de atenção usa a saída do codificador. Ele pode, assim, acessar toda a frase de entrada para melhor prever a palavra atual. Isso é muito útil, pois diferentes idiomas podem ter regras gramaticais que colocam as palavras em ordens diferentes, ou algum contexto fornecido posteriormente na frase pode ser útil para determinar a melhor tradução de uma determinada palavra.
 

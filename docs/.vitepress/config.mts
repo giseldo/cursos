@@ -126,7 +126,8 @@ export default withMermaid({
           items: [
             { text: 'Sobre', link: '/pln/' },
             { text: 'Introdução', link: '/pln/1-introducao' },
-            { text: 'Transformers', link: '/pln/2-transformers' }                        
+            { text: 'Transformers', link: '/pln/2-transformers' },                        
+            { text: 'Arquitetura', link: '/pln/3-arquitetura' }                        
           ]
         }
       ],
