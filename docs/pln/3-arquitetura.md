@@ -16,7 +16,16 @@ Aqui alguns pontos de referência na (pequena) história dos modelos Transformer
 
 <img class="block dark:hidden" src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers_chrono.svg" alt="A brief chronology of Transformers models.">
 
-A [arquitetura Transformer](https://arxiv.org/abs/1706.03762) foi introduzida em Junho de 2017. O foco de pesquisa original foi para tarefas de tradução. Isso foi seguido pela introdução de muitos modelos influentes, incluindo:
+A [arquitetura Transformer](https://arxiv.org/abs/1706.03762) foi introduzida em Junho de 2017. O foco de pesquisa original foi para tarefas de tradução. 
+
+::: info Bate papo com duas pessoas sobre Paper Attention is all you need gerado automaticamente pelo notebookLM
+<audio controls>
+    <source src="./audio/attention_is_all_you_need.wav" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+:::
+
+Isso foi seguido pela introdução de muitos modelos influentes, incluindo:
 
 - **Junho de 2018**: [GPT](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf), o primeiro modelo Transformer pré-treinado, usado para ajuste-fino em várias tarefas de NLP e obtendo resultados estado-da-arte
 

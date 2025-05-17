@@ -1,10 +1,10 @@
 # Transformers
 
-Os modelos treinados disponíveis na API `transformers` são usados para muitas tarefas de PLN. 
 
-A biblioteca [transformers](https://github.com/huggingface/transformers) oferece a funcionalidade para criar e usar esses modelos compartilhados. O [Hugging Face Model Hub](https://huggingface.co/models) contém milhares de modelos pré-treinados que qualquer um pode baixar e usar. 
 
-O [Hugging Face Model Hub](https://huggingface.co/models) não é limitado aos modelos `transformers`. Qualquer um pode compartilhar quaisquer tipos de modelos ou datasets que quiserem! Você mesmo pode fazer  upload nos seus próprios modelos no Hub!
+A biblioteca (as vezes chamada de API) [transformers](https://github.com/huggingface/transformers) possui modelos treinados que são usados em muitas tarefas de PLN.  Essa biblioteca também oferece a funcionalidade para criar e usar esses modelos compartilhados. O [Hugging Face Model Hub](https://huggingface.co/models) contém milhares de modelos pré-treinados que qualquer um pode baixar e usar. 
+
+O [Hugging Face Model Hub](https://huggingface.co/models) não é limitado aos modelos da api `transformers`. Qualquer um pode compartilhar quaisquer tipos de modelos ou datasets que quiserem! Você mesmo pode fazer  upload nos seus próprios modelos no Hub!
 :::info
 Veja os modelos que Giseldo Neo já hospedou no Hugging Face, acessando o link http://huggingface.co/giseldo
 :::
