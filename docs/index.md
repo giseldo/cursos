@@ -62,6 +62,12 @@ features:
     link: /am/
     linkText: Leia mais
 
+
+  - title: GPT do Zero
+    details: 
+    link: /gpt_do_zero/
+    linkText: Leia mais
+
   # - title: LLM (medium)
   #   details: 
   #   link: /llm/

@@ -5,26 +5,27 @@ Processamento de Linguagem Natural (PLN) é um campo da linguística e da aprend
 
 A seguir uma lista de tarefas comuns de NLP, com alguns exemplos.
 
-* Classificação de sentenças
-  * Capturar o sentimento de uma sentença, relacionado por exemplo a revisão de determinado produto;
+![alt text](fig/tasks_pln.png)
+
+* Classificação de sentenças (_text_classification_)
+  * Capturar o sentimento de uma sentença, relacionado por exemplo a revisão de determinado produto; (_sentiment_analisys_)
   * Detectar se um email é spam ou não;
   * Determinar se uma sentença é gramaticalmente correta;
   * Determinar se duas sentencas são logicamente relacionadas ou não.
 
-* Classificação de cada palavra em uma sentença
+* Classificação de cada palavra em uma sentença (*named_entity_recognition*)
   * Identificar os componentes gramaticais de uma sentença, por exemplo, substantivo, verbo, adjetivo;
   * Identificar as entidades nomeadas, por exemplo, pessoa, local, organização;
 
-* Geração de conteúdo textual
-  * completar um trecho com autogeração textual, preenchendo as lacunas em um texto com palavas mascaradas
-
-* Extrair uma resposta de um texto
+* Extrair uma resposta de um texto (*question_answering*)
   * Dada uma pergunta e um contexto, extrair a resposta baseada na informação passada no contexto.
 
-* Gerar uma nova sentença a partir de uma entrada de texto
-  
+* Gerar uma nova sentença a partir de uma entrada de texto (_text_generation_)
   * Traduzir a sentença para outro idioma
   * resumir um texto
+
+* Geração de conteúdo textual (_fill-mask_)
+  * completar um trecho com autogeração textual, preenchendo as lacunas em um texto com palavas mascaradas
 
 PLN não se limita ao texto escrito. Também engloba desafios complexos nos campos de reconhecimento de discurso e visão computacional, tal como a geração de transcrição de uma amostra de áudio ou a descrição de uma imagem.
 
@@ -36,13 +37,4 @@ Os computadores não processam a informação da mesma forma que os seres humano
 
 Aqui estão algumas empresas e organizações usando a Hugging Face e os modelos `transformers`. Estas empresas também contribuem de volta para a comunidade compartilhando seus modelos.
 
-- Facebook - 23 modelos
-- Microsoft - 33 modelos
-- Grammarly - 1 modelo
-- Google - 115 modelos
-- Asteroid-team - 1 modelo
-- Allen Institute - 43 modelos
-- Typerform 
-- Deepseek 
-- Alibaba - Qwen
-
+![alt text](fig/empresas.png)

@@ -43,7 +43,7 @@ huggingface-cli login
 
 ## Análise de sentimento
 
-### Exemplo 1 - Análise de sentimento simples
+### Exemplo 1 - Análise de sentimento de uma sentença
 
 Abaixo o código para usar um modelo classificador de sentimento. Basta informar um texto (uma sentença, um conjunto de frases) e passar para o pipeline que ele retorna o rótulo: `positivo` ou `negativo`, além do `score`, sendo o score confiança da rotulagem dos dados. O retorno é em formato JSON.
 
@@ -76,7 +76,7 @@ Por padrão, se não for informado um modelo, o pipeline seleciona um modelo pr�
 
 O modelo é baixado e cacheado quando você cria o objeto `classifier`. Se você rodar novamente o comando, o modelo cacheado será usado e não será baixado novamente.
 
-### Exemplo 2 - Lista de sentenças.
+### Exemplo 2 - Análise de sentimento de uma lista de sentenças.
 
 Também podemos passar mais de uma sentença em uma lista para o classificador, conforme exemplo a seguir.
 
@@ -158,7 +158,6 @@ generator = pipeline("text-generation")
 generator("In this course, we will teach you how to")
 ```
 
-<!--
 ```
  [{'generated_text': """In this course, we will teach 
 you how to  navigate the real world using the virtual 
@@ -166,7 +165,6 @@ world which can serve  as a powerful tool to help you
 develop skills in the real world  and learn skills in 
 the virtual world.\n\nFor the VirtualWorld course,"""}]
 ``` 
--->
 
 O modelo padrão para a tarefa `text-generation` é o _openai-community/gpt2_.
 
@@ -183,7 +181,7 @@ generator("In this course, we will teach you how to",
     max_length=30)
 ```
 
-<!-- ```
+``` 
 [{'generated_text': """In this course, we will teach 
 you how to develop and use your voice to help others 
 around you understand how you can help them.\n\nThe"""},
@@ -191,7 +189,7 @@ around you understand how you can help them.\n\nThe"""},
  you how to  create multiple different web applications 
  to run in multiple  languages, providing you a complete 
  framework for writing an  application"""}]
- ``` -->
+``` 
 
 O modelo padrão utilizado foi o _openai-community/gpt2_.    
 
@@ -214,14 +212,14 @@ generator ("In this course, we will teach you how to",
           num_return_sequences=2)
 ```
 
-<!-- ```
+```
 [{'generated_text': '''In this course, we will teach you 
 how to write a new language without using anything new. 
 For example; as it is written, the same language'''},
  {'generated_text': '''In this course, we will teach you 
  how to  solve this problem through a real, real, and real 
  data-centric approach: an algorithm that combines'''}]
-``` -->
+```
 
 :::info
 Experimente! Use os filtros para encontrar um modelo de geração de texto em outra língua no [Hugging Face Model Hub](https://huggingface.co/models). 
