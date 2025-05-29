@@ -1,5 +1,6 @@
 .vscode
-node_modules
 .venv
+.env
+node_modules
 docs\.vitepress\cache
 dist

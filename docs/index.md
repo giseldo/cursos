@@ -7,6 +7,11 @@ hero:
   text: "Cursos em inteligência artificial"
 features:
 
+  - title: Redes Neurais
+    details: 
+    link: /redesneurais/
+    linkText: Leia mais
+
   - title: Frameworks
     details: 
     link: /frameworks/

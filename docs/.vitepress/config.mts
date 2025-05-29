@@ -28,6 +28,18 @@ export default withMermaid({
 
     sidebar: {
 
+        '/redesneurais/': [
+          {
+            text: 'Redes Neurais',
+            items: [
+              { text: 'Inicio', link: '/redesneurais/' },
+              { text: 'Bert vs GPT', link: '/redesneurais/1_bert_vs_gpt' },
+              { text: 'Exemplo BERT Python', link: '/redesneurais/2_exemplo_bert' },
+              { text: 'BERT', link: '/redesneurais/3_bert' },
+            ]
+          }
+        ],
+
        '/frameworks/': [
         {
           text: 'Frameworks',
@@ -52,7 +64,7 @@ export default withMermaid({
         }
       ],
 
-      '/gradioo/': [
+      '/gradio/': [
         {
           text: 'Gradio',
           items: [
