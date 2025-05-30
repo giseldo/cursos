@@ -34,7 +34,7 @@ export default withMermaid({
             items: [
               { text: 'Inicio', link: '/redesneurais/' },
               { text: 'Bert vs GPT', link: '/redesneurais/1_bert_vs_gpt' },
-              { text: 'Exemplo BERT Python', link: '/redesneurais/2_exemplo_bert' },
+              { text: 'GPT', link: '/redesneurais/2_gpt' },
               { text: 'BERT', link: '/redesneurais/3_bert' },
             ]
           }

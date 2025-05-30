@@ -1,14 +1,20 @@
-# Modelo base BERT (uncased)
+# Modelo BERT (bert-base-uncased)
 
 ## Introdução
 
-Link do modelo no [Hugging Face](https://huggingface.co/google-bert/bert-base-uncased)
+Essa página é uma tradução com pequenos ajustes do material disponível no [Link](https://huggingface.co/google-bert/bert-base-uncased)
 
 :::info
 uncase = sem caixa alta, ou seja tudo minúsculo
 :::
 
 O `bert base uncased` é um modelo `pré-treinado (pre-training)`  em inglês. Ele foi apresentado neste [artigo](https://arxiv.org/abs/1810.04805) e lançado pela primeira vez neste [repositório](https://github.com/google-research/bert). Este modelo é _uncased_. Por exemplo, não faz distinção entre inglês e Inglês.
+
+## Áudio explicativo
+
+Você pode ouvir uma explicação complementar sobre o modelo BERT no seguinte link:
+
+[áudio explicativo](https://notebooklm.google.com/notebook/e04f4178-ca7d-4003-995c-b0d4ada6a145/audio)
 
 ## Descrição do modelo
 
@@ -96,6 +102,8 @@ unmasker("Hello I'm a [MASK] model.")
 
 Veja como usar este modelo para obter as características de um determinado texto no PyTorch:
 
+<ColabButton href="https://colab.research.google.com/github/giseldo/cursos/blob/main/docs/redesneurais/notebooks/3_bert.ipynb" />
+
 ```python
 from transformers import BertTokenizer, BertModel
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
@@ -105,20 +113,11 @@ encoded_input = tokenizer(text, return_tensors='pt')
 output = model(**encoded_input)
 ```
 
-e no TensorFlow:
-
-```python
-from transformers import BertTokenizer, TFBertModel
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = TFBertModel.from_pretrained("bert-base-uncased")
-text = "Replace me by any text you'd like."
-encoded_input = tokenizer(text, return_tensors='tf')
-output = model(encoded_input)
-```
-
 ## Limitações e viés
 
 Mesmo que os dados de treinamento usados ​​para este modelo possam ser caracterizados como bastante neutros, este modelo pode ter previsões tendenciosas:
+
+<ColabButton href="https://colab.research.google.com/github/giseldo/cursos/blob/main/docs/redesneurais/notebooks/3_bert.ipynb" />
 
 ```python
 from transformers import pipeline
@@ -178,14 +177,15 @@ unmasker("The woman worked as a [MASK].")
 
 Esse viés também afetará todas as versões refinadas deste modelo.
 
- 
 ## Dados de treinamento
 
-O modelo BERT foi pré-treinado no BookCorpus , um conjunto de dados composto por 11.038 livros não publicados e Wikipédia em inglês (excluindo listas, tabelas e cabeçalhos).
+O modelo BERT foi pré-treinado no `BookCorpus` , um conjunto de dados composto por 11.038 livros não publicados e Wikipédia em inglês (excluindo listas, tabelas e cabeçalhos).
 
-Procedimento de treinamento
-Pré-processamento
-Os textos são escritos em minúsculas e tokenizados usando o WordPiece e um vocabulário de 30.000 palavras. As entradas do modelo são então do tipo:
+## Procedimento de treinamento
+
+### Pré-processamento
+
+Os textos são escritos em minúsculas e tokenizados usando o `WordPiece` e um vocabulário de 30.000 palavras. As entradas do modelo são então do tipo:
 
 ```bash
 [CLS] Sentence A [SEP] Sentence B [SEP]
@@ -195,37 +195,22 @@ Com probabilidade de 0,5, as sentenças A e B correspondem a duas sentenças con
 
 Os detalhes do procedimento de mascaramento para cada frase são os seguintes:
 
-15% dos tokens são mascarados.
-Em 80% dos casos, os tokens mascarados são substituídos por [MASK].
-Em 10% dos casos, os tokens mascarados são substituídos por um token aleatório (diferente) daquele que eles substituem.
-Nos 10% de casos restantes, os tokens mascarados são deixados como estão.
+- 15% dos tokens são mascarados.
+- Em 80% dos casos, os tokens mascarados são substituídos por [MASK].
+- Em 10% dos casos, os tokens mascarados são substituídos por um token aleatório (diferente) daquele que eles substituem.
+- Nos 10% de casos restantes, os tokens mascarados são deixados como estão.
 
 ## Pré-treinamento
 
-O modelo foi treinado em 4 TPUs de nuvem na configuração Pod (16 chips TPU no total) por um milhão de etapas com um tamanho de lote de 256. O comprimento da sequência foi limitado a 128 tokens para 90% das etapas e 512 para os 10% restantes. O otimizador utilizado é o Adam, com uma taxa de aprendizado de 1e-4.
+O modelo foi treinado em 4 TPUs de nuvem na configuração Pod (16 chips TPU no total) por um milhão de etapas com um tamanho de lote de 256. O comprimento da sequência foi limitado a 128 tokens para 90% das etapas e 512 para os 10% restantes. 
+O otimizador utilizado é o Adam, com uma taxa de aprendizado de 1e-4, β1 =0,9 e β2=0,999, uma queda de peso de 0,01, aquecimento da taxa de aprendizagem para 10.000 passos e queda linear da taxa de aprendizagem depois.
 
-<!-- β
-1
-=
-0,9
-β 
-1
-​
- =0,9e
-β
-2
-=
-0,999
-β 
-2 -->
-​
- =0,999, uma queda de peso de 0,01, aquecimento da taxa de aprendizagem para 10.000 passos e queda linear da taxa de aprendizagem depois.
+## Resultados da avaliação
 
-Resultados da avaliação
 Quando ajustado em tarefas posteriores, este modelo alcança os seguintes resultados:
 
-Resultados do teste de cola:
+Resultados do teste Glue:
 
-<!-- Tarefa	MNLI-(m/mm)	QQP	QNLI	SST-2	Cola	STS-B	MRPC	RTE	Média
-84,6/83,4	71,2	90,5	93,5	52,1	85,8	88,9	66,4	79,6
-Informações de entrada e citação do BibTeX -->
+| Tarefa    |	MNLI-(m/mm)	 | QQP  	| QNLI	 | SST-2	| Cola	| STS-B	| MRPC	| RTE	 | Média |
+|-----------|--------------|--------|--------|--------|-------|-------|-------|------|-------| 
+|           | 84,6/83,4	   | 71,2	  | 90,5	 | 93,5	  | 52,1	| 85,8	| 88,9	| 66,4 | 79,6  | 
