@@ -14,13 +14,13 @@ O `bert base uncased` é um modelo `pré-treinado (pre-training)`  em inglês. E
 
 
 
-- **Áudio explicativo**: [áudio explicativo](https://notebooklm.google.com/notebook/e04f4178-ca7d-4003-995c-b0d4ada6a145/audio) Você pode ouvir uma explicação complementar sobre o modelo BERT no seguinte link (gerado com notebookLM a partir do artigo original):
+- **Áudio explicativo**: [áudio explicativo](https://notebooklm.google.com/notebook/e04f4178-ca7d-4003-995c-b0d4ada6a145/audio) Explicação complementar sobre o modelo BERTgerado com notebookLM a partir do artigo original.
 
-- **Video explicativo**: [Explicação do BERT - YouTube](https://www.youtube.com/watch?v=OklmvRidSdE&pp=0gcJCbAJAYcqIYzv) Assista a uma explicação detalhada sobre o modelo BERT no vídeo acima.
+- **Vídeo explicativo**: [Explicação do BERT - YouTube](https://www.youtube.com/watch?v=OklmvRidSdE&pp=0gcJCbAJAYcqIYzv) Explicação detalhada sobre o modelo BERT.
 
 ## Descrição do modelo
 
-O BERT é um modelo de `tranformer` pré-treinado em um grande corpus de dados em inglês de forma autossupervisionada. Isso significa que ele foi pré-treinado apenas com os textos brutos, sem a necessidade de qualquer tipo de rotulagem humana (e é por isso que ele pode usar muitos dados disponíveis publicamente), com um processo automático para gerar entradas e rótulos a partir desses textos. Mais precisamente, ele foi pré-treinado com dois objetivos:
+O BERT é um modelo tipo `tranformer` pré-treinado em um grande corpus de dados em inglês de forma autossupervisionada (selfsupeervised learning). Isso significa que ele foi pré-treinado apenas com os textos brutos, sem a necessidade de qualquer tipo de rotulagem humana (uma vantagem pois existem muitos dados disponíveis publicamente, tais como livros e wikipedia), com um processo automático para gerar entradas e rótulos a partir desses textos. Mais precisamente, ele foi pré-treinado com dois objetivos:
 
 ```mermaid
 flowchart TD
@@ -36,15 +36,13 @@ Dessa forma, o modelo aprende uma representação interna do idioma inglês que 
 
 ## Variações do modelo
 
-O BERT foi originalmente lançado em versões base e `large` (grande), para texto de entrada cased e uncased (com e sem caixa-alta). Os modelos uncased (sem caixa) também removem os marcadores de acento.
+O BERT foi originalmente lançado em versões `base` e `large` (grande), para texto de entrada `cased` e `uncased` (com e sem caixa-alta). Os modelos `uncased` (sem caixa) também removem os marcadores de acento.
 
 Versões em chinês e multilíngue, com e sem caixa, surgiram logo em seguida.
 
 O pré-processamento modificado com mascaramento de palavras inteiras substituiu o mascaramento de subparte em um trabalho subsequente, com o lançamento de dois modelos.
 
 Outros 24 modelos menores foram lançados posteriormente.
-
-O histórico detalhado do lançamento pode ser encontrado no arquivo readme google-research/bert no github.
 
 ### Tabela comparativa dos modelos BERT
 
@@ -63,9 +61,9 @@ O histórico detalhado do lançamento pode ser encontrado no arquivo readme goog
 
 Você pode usar o modelo bruto para modelagem de linguagem mascarada `Masked language modeling (MLM)` ou previsão da próxima frase `Next sentence prediction (NSP)`, mas ele se destina principalmente a ajustes finos em uma tarefa posterior. Consulte o hub de modelos do [Hugging Face](https://huggingface.co/models) para procurar versões ajustadas de uma tarefa do seu interesse.
 
-Observe que este modelo visa principalmente o ajuste fino em tarefas que usam a frase inteira (potencialmente mascarada) para tomar decisões, como classificação de sequências (_sequence_classification_), classificação de tokens (_token_classification_) ou resposta a perguntas (_question_answering_). 
+Observe que este modelo visa principalmente o ajuste fino (`fine-tuning`) em tarefas que usam a frase inteira (potencialmente mascarada) para tomar decisões, como classificação de sequências (_sequence_classification_), classificação de tokens (_token_classification_) ou resposta a perguntas (_question_answering_). 
 
-Para tarefas como geração de texto (_text_generation_), você deve considerar um modelo como o GPT2.
+Para tarefas como geração de texto (_text_generation_), você deve considerar um modelo como o GPT2 ou GPT3.
 
 ## Como usar
 
@@ -110,7 +108,7 @@ Veja como usar este modelo para obter as características de um determinado text
 from transformers import BertTokenizer, BertModel
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained("bert-base-uncased")
-text = "Replace me by any text you'd like."
+text = "Hello Word"
 encoded_input = tokenizer(text, return_tensors='pt')
 output = model(**encoded_input)
 ```
@@ -193,7 +191,7 @@ Os textos são escritos em minúsculas e tokenizados usando o `WordPiece` e um v
 [CLS] Sentence A [SEP] Sentence B [SEP]
 ```
 
-Com probabilidade de 0,5, as sentenças A e B correspondem a duas sentenças consecutivas no corpus original e, nos demais casos, é outra sentença aleatória no corpus. Observe que o que é considerado uma sentença aqui é um trecho consecutivo de texto, geralmente maior do que uma única sentença. A única restrição é que o resultado com as duas "sentenças" tem um comprimento combinado inferior a 512 tokens.
+Com probabilidade de 0,5 (50%) as sentenças A e B correspondem a duas sentenças consecutivas no corpus original e, nos demais casos, é outra sentença aleatória no corpus. Observe que o que é considerado uma sentença aqui é um trecho consecutivo de texto, geralmente maior do que uma única sentença. A única restrição é que o resultado com as duas "sentenças" tem um comprimento combinado inferior a 512 tokens.
 
 Os detalhes do procedimento de mascaramento para cada frase são os seguintes:
 
@@ -204,7 +202,8 @@ Os detalhes do procedimento de mascaramento para cada frase são os seguintes:
 
 ### Pré-treinamento
 
-O modelo foi treinado em 4 TPUs de nuvem na configuração Pod (16 chips TPU no total) por um milhão de etapas com um tamanho de lote de 256. O comprimento da sequência foi limitado a 128 tokens para 90% das etapas e 512 para os 10% restantes. 
+O modelo foi treinado em 4 TPUs de nuvem na configuração Pod (16 chips TPU no total) por um milhão de etapas (`epochs`) com um tamanho de lote de 256. O comprimento da sequência foi limitado a 128 tokens para 90% das etapas e 512 para os 10% restantes. 
+
 O otimizador utilizado é o Adam, com uma taxa de aprendizado de 1e-4, β1 =0,9 e β2=0,999, uma queda de peso de 0,01, aquecimento da taxa de aprendizagem para 10.000 passos e queda linear da taxa de aprendizagem depois.
 
 ## Resultados da avaliação
