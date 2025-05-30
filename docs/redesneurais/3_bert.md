@@ -2,58 +2,68 @@
 
 ## Introdução
 
+Link do modelo no [Hugging Face](https://huggingface.co/google-bert/bert-base-uncased)
+
 :::info
 uncase = sem caixa alta, ou seja tudo minúsculo
 :::
 
-O `bert base uncased model` é um mdelo `pré-treinado (pre-training)`  em inglês usando o objetivo de `modelagem de linguagem mascarada (mask laguage modeling - MLM)`. Ele foi apresentado neste [artigo](https://arxiv.org/abs/1810.04805) e lançado pela primeira vez neste [repositório](https://github.com/google-research/bert). Este modelo é uncased. Por exemplo, não faz distinção entre inglês e Inglês.
-
-```mermaid
-graph LR
-  A[Pré-processamento] --> B[Tokenização WordPiece]
-  B --> C[Máscara de 15% dos tokens]
-  C --> D[Substituição por [MASK], aleatório ou mantém]
-  D --> E[Pré-treinamento]
-  E --> F[MLM (Modelagem de Linguagem Mascarada)]
-  E --> G[NSP (Previsão da Próxima Frase)]
-  F --> H[Representação Bidirecional]
-  G --> H
-  H --> I[Ajuste fino para tarefas específicas]
-```
+O `bert base uncased` é um modelo `pré-treinado (pre-training)`  em inglês. Ele foi apresentado neste [artigo](https://arxiv.org/abs/1810.04805) e lançado pela primeira vez neste [repositório](https://github.com/google-research/bert). Este modelo é _uncased_. Por exemplo, não faz distinção entre inglês e Inglês.
 
 ## Descrição do modelo
 
 O BERT é um modelo de `tranformer` pré-treinado em um grande corpus de dados em inglês de forma autossupervisionada. Isso significa que ele foi pré-treinado apenas com os textos brutos, sem a necessidade de qualquer tipo de rotulagem humana (e é por isso que ele pode usar muitos dados disponíveis publicamente), com um processo automático para gerar entradas e rótulos a partir desses textos. Mais precisamente, ele foi pré-treinado com dois objetivos:
 
-- Modelagem de linguagem mascarada (MLM): pegando uma frase, o modelo mascara aleatoriamente 15% das palavras na entrada e, em seguida, executa a frase mascarada inteira no modelo e precisa prever as palavras mascaradas. Isso é diferente das redes neurais recorrentes (RNNs) tradicionais, que geralmente veem as palavras uma após a outra, ou de modelos autorregressivos como o GPT, que mascara internamente os tokens futuros. Isso permite que o modelo aprenda uma representação bidirecional da frase.
+```mermaid
+flowchart TD
+        A["objetivos do pré-treino do modelo _bert-base-uncased_"]
+        A --> C["Masked language modeling (MLM)"]
+        A --> D["Next sentence prediction (NSP)"]
+```
 
-- Previsão da próxima frase (NSP): o modelo concatena duas frases mascaradas como entradas durante o pré-treinamento. Às vezes, elas correspondem a frases que estavam próximas uma da outra no texto original, às vezes não. O modelo então precisa prever se as duas frases estavam uma após a outra ou não.
+- `Masked language modeling (MLM)` Modelagem de linguagem mascarada (MLM): pegando uma frase, o modelo mascara aleatoriamente 15% das palavras na entrada e, em seguida, executa a frase mascarada inteira no modelo e precisa prever as palavras mascaradas. Isso é diferente das redes neurais recorrentes (RNNs) tradicionais, que geralmente veem as palavras uma após a outra, ou de modelos autorregressivos como o GPT, que mascara internamente os tokens futuros. Isso permite que o modelo aprenda uma representação bidirecional da frase.
+
+- `Next sentence prediction (NSP)` Previsão da próxima frase (NSP): o modelo concatena duas frases mascaradas como entradas durante o pré-treinamento. Às vezes, elas correspondem a frases que estavam próximas uma da outra no texto original, às vezes não. O modelo então precisa prever se as duas frases estavam uma após a outra ou não.
 Dessa forma, o modelo aprende uma representação interna do idioma inglês que pode então ser usada para extrair recursos úteis para tarefas posteriores: se você tiver um conjunto de dados de frases rotuladas, por exemplo, poderá treinar um classificador padrão usando os recursos produzidos pelo modelo BERT como entradas.
 
-Variações do modelo
-O BERT foi originalmente lançado em versões base e grande, para texto de entrada com e sem caixa. Os modelos sem caixa também removem os marcadores de acento.
+## Variações do modelo
+
+O BERT foi originalmente lançado em versões base e `large` (grande), para texto de entrada cased e uncased (com e sem caixa-alta). Os modelos uncased (sem caixa) também removem os marcadores de acento.
+
 Versões em chinês e multilíngue, com e sem caixa, surgiram logo em seguida.
+
 O pré-processamento modificado com mascaramento de palavras inteiras substituiu o mascaramento de subparte em um trabalho subsequente, com o lançamento de dois modelos.
-Outros 24 modelos menores são lançados posteriormente.
+
+Outros 24 modelos menores foram lançados posteriormente.
 
 O histórico detalhado do lançamento pode ser encontrado no arquivo readme google-research/bert no github.
 
-Modelo	#parâmetros	Linguagem
-bert-base-uncased	110 milhões	Inglês
-bert-large-uncased	340 milhões	Inglês
-bert-base-cased	110 milhões	Inglês
-bert-large-cased	340 milhões	Inglês
-bert-base-chinese	110 milhões	chinês
-bert-base-multilingual-cased	110 milhões	Múltiplos
-bert-large-uncased-whole-word-masking	340 milhões	Inglês
-bert-large-cased-whole-word-masking	340 milhões	Inglês
-Usos pretendidos e limitações
-Você pode usar o modelo bruto para modelagem de linguagem mascarada ou previsão da próxima frase, mas ele se destina principalmente a ajustes finos em uma tarefa posterior. Consulte o hub de modelos para procurar versões ajustadas de uma tarefa do seu interesse.
+### Tabela comparativa dos modelos BERT
 
-Observe que este modelo visa principalmente o ajuste fino em tarefas que usam a frase inteira (potencialmente mascarada) para tomar decisões, como classificação de sequências, classificação de tokens ou resposta a perguntas. Para tarefas como geração de texto, você deve considerar um modelo como o GPT2.
+| Modelo                                   | Tamanho do modelo | Tipo de caixa | Máscara de palavra inteira | Idioma(s)   |
+|-------------------------------------------|------------------|--------------|---------------------------|-------------|
+| bert-base-uncased                        | 110M             | uncased      | Não                       | Inglês      |
+| bert-large-uncased                       | 340M             | uncased      | Não                       | Inglês      |
+| bert-base-cased                          | 110M             | cased        | Não                       | Inglês      |
+| bert-large-cased                         | 340M             | cased        | Não                       | Inglês      |
+| bert-base-chinese                        | 110M             | cased        | Não                       | Chinês      |
+| bert-base-multilingual-cased             | 110M             | cased        | Não                       | Multilíngue |
+| bert-large-uncased-whole-word-masking    | 340M             | uncased      | Sim                       | Inglês      |
+| bert-large-cased-whole-word-masking      | 340M             | cased        | Sim                       | Inglês      |
 
-Como usar
+## Usos pretendidos e limitações
+
+Você pode usar o modelo bruto para modelagem de linguagem mascarada `Masked language modeling (MLM)` ou previsão da próxima frase `Next sentence prediction (NSP)`, mas ele se destina principalmente a ajustes finos em uma tarefa posterior. Consulte o hub de modelos do [Hugging Face](https://huggingface.co/models) para procurar versões ajustadas de uma tarefa do seu interesse.
+
+Observe que este modelo visa principalmente o ajuste fino em tarefas que usam a frase inteira (potencialmente mascarada) para tomar decisões, como classificação de sequências (_sequence_classification_), classificação de tokens (_token_classification_) ou resposta a perguntas (_question_answering_). 
+
+Para tarefas como geração de texto (_text_generation_), você deve considerar um modelo como o GPT2.
+
+## Como usar
+
 Você pode usar este modelo diretamente com um pipeline para modelagem de linguagem mascarada:
+
+<ColabButton href="https://colab.research.google.com/github/giseldo/cursos/blob/main/docs/redesneurais/notebooks/3_bert.ipynb" />
 
 ```python
 from transformers import pipeline
@@ -62,26 +72,26 @@ unmasker("Hello I'm a [MASK] model.")
 ```
 
 ```bash
-[{'sequence': "[CLS] hello i'm a fashion model. [SEP]",
-  'score': 0.1073106899857521,
+[{'score': 0.10731097310781479,
   'token': 4827,
-  'token_str': 'fashion'},
- {'sequence': "[CLS] hello i'm a role model. [SEP]",
-  'score': 0.08774490654468536,
+  'token_str': 'fashion',
+  'sequence': "hello i ' m a fashion model."},
+ {'score': 0.08774522691965103,
   'token': 2535,
-  'token_str': 'role'},
- {'sequence': "[CLS] hello i'm a new model. [SEP]",
-  'score': 0.05338378623127937,
+  'token_str': 'role',
+  'sequence': "hello i ' m a role model."},
+ {'score': 0.053383976221084595,
   'token': 2047,
-  'token_str': 'new'},
- {'sequence': "[CLS] hello i'm a super model. [SEP]",
-  'score': 0.04667217284440994,
+  'token_str': 'new',
+  'sequence': "hello i ' m a new model."},
+ {'score': 0.04667223244905472,
   'token': 3565,
-  'token_str': 'super'},
- {'sequence': "[CLS] hello i'm a fine model. [SEP]",
-  'score': 0.027095865458250046,
+  'token_str': 'super',
+  'sequence': "hello i ' m a super model."},
+ {'score': 0.027095822617411613,
   'token': 2986,
-  'token_str': 'fine'}]
+  'token_str': 'fine',
+  'sequence': "hello i ' m a fine model."}]
 ```
 
 Veja como usar este modelo para obter as características de um determinado texto no PyTorch:

@@ -211,7 +211,8 @@ export default withMermaid({
     search: {
       provider: 'local'
     }
-  }
+  },
+  head: [
+    ['script', { src: '/login.js' }]
+  ]
 })
-
-
