@@ -1,10 +1,15 @@
----
-outline: deep
----
-
 # Estatística e AM com Python
 
-Em aprendizagem de máquina utiliza-se _conjunto de dados_ para realizar previsões.
+:::info
+<div style="display: flex; gap: 10px; align-items: center;">
+  <img src="./fig/esquerda.jpg" style="width:5%" alt="image" />
+  <img src="./fig/direita.jpg" style="width:5%" alt="image" />
+  Você pode usar as setas do teclado para navegar entre as seções.
+</div>
+:::
+
+
+Em aprendizagem de máquina utiliza-se um _conjunto de dados_ para realizar previsões.
 
 ## Conjunto de dados
 
@@ -16,7 +21,7 @@ Tabela 1 - Conjunto de dados fictício.
 
 |Nome|Idade|Perfil|
 |---|---|---|
-|giseldo|40|professor|
+|Giseldo|40|professor|
 |Alex|14|aluno|
 |Alana|14|aluno|
 |Gisella|15|aluno|
@@ -39,7 +44,7 @@ Tabela 1 - Conjunto de dados fictício.
 
 ## Tipo do atributo
 
-Um atributo pode ser do tipo _númerico_ ou _categórico_. Se ele for numérico, pode ser ainda _contínuo_ (representando uma medida, ex: peso, altura) ou _discreto_ (representando uma contagem, por exemplo, idade). Se for categórico, pode ser _nominal_ (por exemplo, nome ou cidade) ou _ordinal_ (pode ser ordenado, nível de escolaridade). Ainda existe um tipo especial de atributo categórico que é _binário_. O tipo categórico binário pode assumir dois valores, por exemplo, 0 ou 1, True ou False e outros semelhantes.
+Um atributo pode ser do tipo _numérico_ ou _categórico_. Se ele for numérico, pode ser ainda _contínuo_ (representando uma medida, ex: peso, altura) ou _discreto_ (representando uma contagem, por exemplo, idade). Se for categórico, pode ser _nominal_ (por exemplo, nome ou cidade) ou _ordinal_ (pode ser ordenado, nível de escolaridade). Ainda existe um tipo especial de atributo categórico que é _binário_. O tipo categórico binário pode assumir dois valores, por exemplo, 0 ou 1, True ou False e outros semelhantes.
 
 Apresentar os tipos dos atributos do conjunto de dados em uma outra tabela, conforme a Tabela 2, é uma boa prática em artigos científicos. Além disso, conhecer o tipo dos atributos é necessário para criar resumos e visualizações dos dados. 
 

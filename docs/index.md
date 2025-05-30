@@ -57,7 +57,7 @@ features:
     link: /regressao/
     linkText: Leia mais
 
-  - title: Estatística e Aprendizagem de Máquina com Python
+  - title: Estatística
     details: 
     link: /estatistica/
     linkText: Leia mais

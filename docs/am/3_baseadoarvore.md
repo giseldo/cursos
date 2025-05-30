@@ -1,7 +1,3 @@
----
-title: Modelos Baseados em Árvore
----
-
 # Modelos Baseados em Árvore
 
 ## Métodos simbólicos

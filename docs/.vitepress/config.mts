@@ -114,8 +114,7 @@ export default withMermaid({
         {
           text: 'Estatística',
           items: [
-            { text: 'Pag 1', link: '/estatistica/' },
-            { text: 'Pag 2', link: '/estatistica/pag2' }                        
+            { text: 'Início', link: '/estatistica/' }
           ]
         }
       ],
@@ -125,9 +124,9 @@ export default withMermaid({
           text: 'AM',
           items: [
             { text: 'Introdução', link: '/am/' },
-            { text: 'Pag 2', link: '/am/cap2' },
-            { text: 'Pag 3', link: '/am/cap3' },
-            { text: 'IA', link: '/am/ia' },
+            { text: 'Preparação dos dados', link: '/am/1_preparacao' },
+            { text: 'Inteligência Artificial', link: '/am/2_ia' },
+            { text: 'Baseado em árvore', link: '/am/3_baseadoarvore' },
             
           ]
         }
