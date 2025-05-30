@@ -8,13 +8,15 @@ Essa página é uma tradução com pequenos ajustes do material disponível no [
 uncase = sem caixa alta, ou seja tudo minúsculo
 :::
 
-O `bert base uncased` é um modelo `pré-treinado (pre-training)`  em inglês. Ele foi apresentado neste [artigo](https://arxiv.org/abs/1810.04805) e lançado pela primeira vez neste [repositório](https://github.com/google-research/bert). Este modelo é _uncased_. Por exemplo, não faz distinção entre inglês e Inglês.
+O `bert base uncased` é um modelo `pré-treinado (pre-training)`  em inglês. Ele foi apresentado neste [artigo](https://arxiv.org/abs/1810.04805) e lançado pela primeira vez neste [repositório](https://github.com/google-research/bert). Este modelo é _uncased_, tudo mínusculo, ou seja, não faz distinção entre _casa_ e _Casa_.
 
-## Áudio explicativo
+## Recursos externos
 
-Você pode ouvir uma explicação complementar sobre o modelo BERT no seguinte link:
 
-[áudio explicativo](https://notebooklm.google.com/notebook/e04f4178-ca7d-4003-995c-b0d4ada6a145/audio)
+
+- **Áudio explicativo**: [áudio explicativo](https://notebooklm.google.com/notebook/e04f4178-ca7d-4003-995c-b0d4ada6a145/audio) Você pode ouvir uma explicação complementar sobre o modelo BERT no seguinte link (gerado com notebookLM a partir do artigo original):
+
+- **Video explicativo**: [Explicação do BERT - YouTube](https://www.youtube.com/watch?v=OklmvRidSdE&pp=0gcJCbAJAYcqIYzv) Assista a uma explicação detalhada sobre o modelo BERT no vídeo acima.
 
 ## Descrição do modelo
 
@@ -200,7 +202,7 @@ Os detalhes do procedimento de mascaramento para cada frase são os seguintes:
 - Em 10% dos casos, os tokens mascarados são substituídos por um token aleatório (diferente) daquele que eles substituem.
 - Nos 10% de casos restantes, os tokens mascarados são deixados como estão.
 
-## Pré-treinamento
+### Pré-treinamento
 
 O modelo foi treinado em 4 TPUs de nuvem na configuração Pod (16 chips TPU no total) por um milhão de etapas com um tamanho de lote de 256. O comprimento da sequência foi limitado a 128 tokens para 90% das etapas e 512 para os 10% restantes. 
 O otimizador utilizado é o Adam, com uma taxa de aprendizado de 1e-4, β1 =0,9 e β2=0,999, uma queda de peso de 0,01, aquecimento da taxa de aprendizagem para 10.000 passos e queda linear da taxa de aprendizagem depois.
@@ -214,3 +216,27 @@ Resultados do teste Glue:
 | Tarefa    |	MNLI-(m/mm)	 | QQP  	| QNLI	 | SST-2	| Cola	| STS-B	| MRPC	| RTE	 | Média |
 |-----------|--------------|--------|--------|--------|-------|-------|-------|------|-------| 
 |           | 84,6/83,4	   | 71,2	  | 90,5	 | 93,5	  | 52,1	| 85,8	| 88,9	| 66,4 | 79,6  | 
+
+
+## BibTeX
+
+```
+@article{DBLP:journals/corr/abs-1810-04805,
+  author    = {Jacob Devlin and
+               Ming{-}Wei Chang and
+               Kenton Lee and
+               Kristina Toutanova},
+  title     = {{BERT:} Pre-training of Deep Bidirectional Transformers for Language
+               Understanding},
+  journal   = {CoRR},
+  volume    = {abs/1810.04805},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1810.04805},
+  archivePrefix = {arXiv},
+  eprint    = {1810.04805},
+  timestamp = {Tue, 30 Oct 2018 20:39:56 +0100},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1810-04805.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
+

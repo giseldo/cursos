@@ -1,5 +1,14 @@
 # Redes Neurais: Uma Introdução
 
+:::info
+<div style="display: flex; gap: 10px; align-items: center;">
+  <img src="./fig/esquerda.jpg" style="width:5%" alt="image" />
+  <img src="./fig/direita.jpg" style="width:5%" alt="image" />
+  Você pode usar as setas do teclado para navegar entre as seções.
+</div>
+:::
+
+
 ## O que são Redes Neurais?
 As redes neurais são sistemas computacionais inspirados no funcionamento do cérebro humano. Elas consistem em unidades chamadas neurônios artificiais, organizados em camadas, que processam informações e aprendem padrões a partir de dados.
 
