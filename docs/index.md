@@ -7,6 +7,11 @@ hero:
   text: "Cursos em inteligência artificial"
 features:
 
+  - title: LLM do Zero
+    details: 
+    link: /llmdozero/
+    linkText: Leia mais
+
   - title: Redes Neurais
     details: 
     link: /redesneurais/

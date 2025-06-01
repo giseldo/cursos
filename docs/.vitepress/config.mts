@@ -32,6 +32,7 @@ export default withMermaid({
         '/redesneurais/': [
           {
             text: 'Redes Neurais',
+            collapsible: true,
             items: [
               { text: 'Inicio', link: '/redesneurais/' },
               { text: 'Bert vs GPT', link: '/redesneurais/1_bert_vs_gpt' },
@@ -41,9 +42,32 @@ export default withMermaid({
           }
         ],
 
+        '/llmdozero/': [
+          {
+            text: 'LLM do Zero',
+            collapsible: true,
+            items: [
+              { text: 'Início', link: '/llmdozero/' },  
+              { text: 'Introdução', link: '/llmdozero/md1_introducao' },  
+              { text: 'O que são LLM', link: '/llmdozero/md1_aula1_o_que_sao_llms' },
+              { text: 'Requisitos Hardware', link: '/llmdozero/md1_aula2_requisitos_hardware' },
+              { text: 'Fundamentos Matemáticos', link: '/llmdozero/md1_aula3_fundamentos_matematicos' },
+              { text: 'Configuracao do ambiente', link: '/llmdozero/md2_aula1_configuracao_ambiente' },
+              { text: 'Mnipulacao dados', link: '/llmdozero/md2_aula2_manipulacao_dados' },
+              { text: 'Componentes transformers', link: '/llmdozero/md3_aula1_componentes_transformer' },
+              { text: 'LLm compacto', link: '/llmdozero/md4_aula1_llm_compacto' },
+              { text: 'Treinamento modelo', link: '/llmdozero/md5_aula1_treinamento_modelo' },
+              { text: 'Fine Tuning', link: '/llmdozero/md6_aula1_fine_tuning' },
+              { text: 'Otimização inferência', link: '/llmdozero/md7_aula1_otimizacao_inferencia' },
+              { text: 'Projetos práticos', link: '/llmdozero/md8_aula1_projetos_praticos' }
+            ]
+          }
+        ],
+
        '/frameworks/': [
         {
           text: 'Frameworks',
+          collapsible: true,
           items: [
             { text: 'Início', link: '/frameworks/' },
             { text: 'Mapeamento Objeto Relacional', link: '/frameworks/1-objeto-relacional' },
@@ -59,6 +83,7 @@ export default withMermaid({
       '/streamlit/': [
         {
           text: 'Streamlit',
+          collapsible: true,
           items: [
             { text: 'Início', link: '/streamlit/' }
           ]
@@ -68,6 +93,7 @@ export default withMermaid({
       '/gradio/': [
         {
           text: 'Gradio',
+          collapsible: true,
           items: [
             { text: 'Início', link: '/gradio/' }
           ]
@@ -77,6 +103,7 @@ export default withMermaid({
       '/python/': [
         {
           text: 'Python',
+          collapsible: true,
           items: [
             { text: 'Início', link: '/python/' },
             { text: 'Introdução', link: '/python/1-introducao' },
@@ -91,6 +118,7 @@ export default withMermaid({
       '/chatbotbook/': [
         {
           text: 'Chatbot',
+          collapsible: true,
           items: [
             { text: 'Index', link: '/chatbotbook/' },
             { text: 'Definições e contexto', link: '/chatbotbook/1_chatbots_definições_e_contexto' },
@@ -113,6 +141,7 @@ export default withMermaid({
       '/estatistica/': [
         {
           text: 'Estatística',
+          collapsible: true,
           items: [
             { text: 'Início', link: '/estatistica/' }
           ]
@@ -122,6 +151,7 @@ export default withMermaid({
       '/am/': [
         {
           text: 'AM',
+          collapsible: true,
           items: [
             { text: 'Introdução', link: '/am/' },
             { text: 'Preparação dos dados', link: '/am/1_preparacao' },
@@ -135,6 +165,7 @@ export default withMermaid({
       '/pln/': [
         {
           text: 'Processamento de linguagem natural',
+          collapsible: true,
           items: [
             { text: 'Sobre', link: '/pln/' },
             { text: 'Introdução', link: '/pln/1-introducao' },
@@ -147,6 +178,7 @@ export default withMermaid({
       '/nlp/': [
         {
           text: 'NLP',
+          collapsible: true,
           items: [
             { text: 'Introdução', link: '/nlp/' },
             ]
@@ -156,6 +188,7 @@ export default withMermaid({
       '/llm/': [
         {
           text: 'LLM (medium)',
+          collapsible: true,
           items: [
             { text: 'Large Language Models: A Short Introduction', link: '/llm/' },
             { text: 'A Very Gentle Introduction to Large Language Models without the Hype', link: '/llm/verygentle' },
@@ -167,6 +200,7 @@ export default withMermaid({
       '/transformers/': [
         {
           text: 'Transformers',
+          collapsible: true,
           items: [
             { text: 'Introdução', link: '/transformers/' },
           ]
@@ -176,6 +210,7 @@ export default withMermaid({
       '/chatbot/': [
         {
           text: 'Chatbot',
+          collapsible: true,
           items: [
             { text: 'Início', link: '/chatbot/' },
             { text: 'Gradio', link: '/chatbot/gradio' }
@@ -186,6 +221,7 @@ export default withMermaid({
       '/regressao/': [
         {
           text: 'Regressao Linear',
+          collapsible: true,
           items: [
             { text: 'Sobre', link: '/regressao/' },
             { text: 'Introdução', link: '/regressao/1-intro' },
