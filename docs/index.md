@@ -42,11 +42,6 @@ features:
     link: /chatbot/
     linkText: Leia mais
 
-  - title: Chatbot Livro
-    details: 
-    link: /chatbotbook/
-    linkText: Leia mais
-
   - title: Processament de Linguagem Natural
     details: 
     link: /pln/
