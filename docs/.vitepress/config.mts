@@ -29,6 +29,19 @@ export default withMermaid({
 
     sidebar: {
 
+        '/nodejs/': [
+          {
+            text: 'Node JS',
+            collapsible: true,
+            items: [
+              { text: 'Introdução ao Node.js', link: '/nodejs/' },
+              { text: 'Módulos e CommonJS vs. ES Modules', link: '/nodejs/2. CommonJS_vs_ES_Modules' },
+              { text: 'Gerenciamento de Pacotes com npm/Yarn', link: '/nodejs/3. Gerenciamento_de_Pacotes_npm_Yarn' },
+              { text: 'Projeto Prático - Servidor HTTP Simples', link: '/nodejs/4. Servidor_HTTP_Simples' },
+            ]
+          }
+        ],
+
         '/redesneurais/': [
           {
             text: 'Redes Neurais',

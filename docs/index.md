@@ -7,6 +7,11 @@ hero:
   text: "Cursos em inteligência artificial"
 features:
 
+  - title: Node
+    details: 
+    link: /nodejs/
+    linkText: Leia mais
+
   - title: LLM do Zero
     details: 
     link: /llmdozero/
