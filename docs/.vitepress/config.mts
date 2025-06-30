@@ -85,7 +85,11 @@ export default withMermaid({
           text: 'Streamlit',
           collapsible: true,
           items: [
-            { text: 'Início', link: '/streamlit/' }
+            { text: 'Início', link: '/streamlit/' },
+            { text: 'Aula 1 - Componentes', link: '/streamlit/aula1' },
+            { text: 'Aula 2 - Gráficos', link: '/streamlit/aula2' },
+            { text: 'Aula 3 - Projeto', link: '/streamlit/aula3' },
+            { text: 'Configuração', link: '/configuracao/' }
           ]
         }
       ],

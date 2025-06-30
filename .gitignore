@@ -3,4 +3,7 @@
 .env
 node_modules
 docs\.vitepress\cache
+docs\.vitepress\cache\**
+docs\.vitepress\cache\*
 dist
+
