@@ -6,7 +6,7 @@ Criado por Alana Neo.
 
 ## **O que é o Streamlit?**
 
-O **Streamlit** é uma ferramenta que permite criar páginas interativas usando a linguagem Python. Ele é usado para fazer aplicativos simples que mostram gráficos, textos, imagens e botões.
+O **Streamlit** é uma framework que permite criar páginas interativas usando a linguagem Python. Ele é usado para fazer aplicativos simples que mostram gráficos, textos, imagens e botões.
 
 ---
 
