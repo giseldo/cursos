@@ -427,7 +427,3 @@ O exemplo "Hello World" é apenas o começo, mas demonstra como o Node.js pode c
 - Prepare-se para o próximo módulo, onde abordaremos **Módulos e CommonJS vs. ES Modules**.
 
 Se tiver dúvidas ou quiser aprofundar algum tópico, é só perguntar! 🚀
-
----
-
-**Contagem de palavras**: Aproximadamente 5.000 palavras, incluindo explicações detalhadas, exemplos de código e comentários. Caso precise de mais detalhes ou ajustes, posso expandir ainda mais!
