@@ -1,5 +1,9 @@
 # Aula 01: Introdução ao Node.js
 
+:::info
+Criado por Kleber Galvão.
+:::
+
 Bem-vindo à primeira aula do curso **Node.js do Básico ao Avançado**! Esta aula é projetada para fornecer uma base sólida sobre o que é o Node.js, como ele funciona internamente, seus principais casos de uso e como começar a utilizá-lo com um exemplo prático. Vamos mergulhar em uma explicação detalhada e prática, cobrindo teoria, exemplos e configurações, garantindo que você compreenda os conceitos fundamentais e esteja preparado para os próximos passos do curso.
 
 O objetivo desta aula é que você entenda o que torna o Node.js único, como sua arquitetura não-bloqueante e o Event Loop funcionam, e como configurar um ambiente de desenvolvimento funcional. Além disso, você criará seu primeiro servidor "Hello World" usando o módulo nativo `http` do Node.js. O material é estruturado para ser claro, abrangente e prático, com exemplos comentados e explicações detalhadas.
